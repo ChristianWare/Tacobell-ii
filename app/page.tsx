@@ -1,11 +1,11 @@
 import Image from "next/image";
 import styles from "./page.module.css";
+import Newest from "@/components/Newest/Newest";
 
 export default function Home() {
   return (
     <div>
-      <h1>GOOD FOOD</h1>
-      <h1>GREAT PEOPLE.</h1>
+      <Newest />
     </div>
   );
 }

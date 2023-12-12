@@ -1,0 +1,268 @@
+.navbar {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1500px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 2rem 3rem;
+}
+
+.navBarLeft {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+}
+
+.logo {
+  font-size: 3rem;
+  color: var(--black);
+  font-family: var(--staatliches);
+  font-weight: 700;
+  z-index: 998;
+}
+
+.logoii {
+  font-size: 3.5rem;
+}
+
+.icon {
+  position: relative;
+  top: 5px;
+}
+
+.officialLogoMobile {
+  display: none;
+}
+
+.officialLogo {
+  margin-top: 1rem;
+}
+
+.menuItemsGroup,
+.navMenu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+  list-style: none;
+}
+
+.navItem {
+  font-size: 2.1rem;
+  font-weight: 700;
+  color: var(--black2);
+  position: relative;
+  user-select: none;
+  transition: all 0.3s ease-in;
+  scroll-behavior: smooth;
+  z-index: 998;
+  font-family: var(--staatliches);
+}
+
+.activeLink {
+  color: var(--text);
+}
+
+.bottom {
+  display: none;
+}
+
+.cart {
+  font-size: 4rem;
+}
+
+.hamburger {
+  display: none;
+  padding: 1rem;
+  border-radius: 10px;
+  z-index: 999;
+  position: relative;
+}
+
+.whiteBar {
+  position: relative;
+  z-index: 9999;
+  display: block;
+  width: 55px;
+  height: 3px;
+  margin: 5px auto;
+  border-radius: 15px;
+  background-color: var(--black);
+  transition: all 0.3s ease-in-out;
+}
+
+.navBarRight {
+  z-index: 3;
+}
+
+.btnContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  z-index: 998;
+}
+
+.phone {
+  position: relative;
+  top: 5px;
+  right: 5px;
+}
+
+.navFooter {
+  display: none;
+}
+
+@media screen and (max-width: 1168px) {
+  .menuItemsGroup,
+  .navMenu {
+    gap: 2rem;
+  }
+}
+
+@media screen and (max-width: 870px) {
+  .navbar {
+    justify-content: space-between;
+    padding: 2rem 3rem;
+  }
+
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 997; /* Lower z-index than .navMenu */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+  }
+
+  .overlay.visible {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .navMenu {
+    position: fixed;
+    right: -100%;
+    top: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    height: 100%;
+    transition: 0.3s all ease-in;
+    z-index: 999;
+    background-color: var(--tan);
+    padding: 1rem;
+    padding-left: 2rem;
+    transform-origin: top;
+  }
+
+  .navMenu.active {
+    right: -35%;
+  }
+
+  .navItem {
+    font-size: 7rem;
+    color: var(--black2);
+    font-family: var(--staatliches);
+    line-height: 0.8;
+    text-transform: uppercase;
+    letter-spacing: -2px;
+  }
+
+  .bottomDesktop {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    width: 100%;
+  }
+
+  .lb2 {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .icon {
+    color: var(--black2);
+  }
+
+  .btnContainer {
+    display: none;
+  }
+
+  .bottom {
+    border-top: 1px solid var(--black);
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .copy {
+    margin-top: 2rem;
+    padding-top: 1rem;
+    color: var(--text2);
+    hyphens: auto;
+    font-size: 1.6rem;
+    border-top: 2px solid var(--text);
+    width: 100%;
+  }
+
+  .hamburger {
+    display: block;
+    cursor: pointer;
+    z-index: 9999;
+  }
+
+  .hamburger.active .whiteBar:nth-child(1) {
+    -webkit-transform: translateY(8px) rotate(45deg);
+    transform: translateY(8px) rotate(45deg);
+    background-color: var(--black);
+  }
+
+  .hamburger.active .whiteBar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .whiteBar:nth-child(3) {
+    -webkit-transform: translateY(-8px) rotate(-45deg);
+    transform: translateY(-8px) rotate(-45deg);
+    background-color: var(--black);
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .header {
+    padding-right: 5px;
+    padding-left: 5px;
+  }
+
+  .navbar {
+    padding: 3rem 2rem;
+  }
+}
+
+@media screen and (max-width: 368px) {
+  .navMenu {
+    padding: 1rem;
+  }
+
+  .openClose {
+    font-size: 1.4rem;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .navMenu {
+    padding: 1rem;
+  }
+}

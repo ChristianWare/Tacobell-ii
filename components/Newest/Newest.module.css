@@ -1,0 +1,17 @@
+.bottom {
+  padding: 3rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem;
+}
+
+.imgContainer {
+  position: relative;
+  width: 100%;
+  height: 250px;
+}
+
+.img {
+  object-fit: cover;
+  border-radius: 20px;
+}
