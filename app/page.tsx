@@ -5,6 +5,7 @@ export default function Home() {
   return (
     <div>
       <h1>GOOD FOOD</h1>
+      <h1>GREAT PEOPLE.</h1>
     </div>
   );
 }
