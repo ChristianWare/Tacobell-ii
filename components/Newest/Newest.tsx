@@ -1,3 +1,5 @@
+// Server Component
+
 import { client } from "@/app/lib/sanity";
 import styles from "./Newest.module.css";
 import { simplifiedProduct } from "@/app/interface";
