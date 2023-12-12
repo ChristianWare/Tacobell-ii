@@ -158,7 +158,11 @@ input:focus {
 @media screen and (max-width: 480px) {
   h1,
   h2 {
-    letter-spacing: -0.1rem;
+    letter-spacing: -0.5rem;
+  }
+
+  h1 {
+    font-size: 6.3rem;
   }
 }
 
