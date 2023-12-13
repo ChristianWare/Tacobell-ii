@@ -4,7 +4,6 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Nav from "@/components/Nav/Nav";
 import CartProvider from "@/components/Providers/Providers";
-import ShoppingCartModal from "@/components/ShoppingCartModal/ShoppingCartModal";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -24,7 +23,6 @@ export default function RootLayout({
       <body className={`${inter.className} ${tuskerGrotesk.variable}`}>
         <CartProvider>
           <Nav />
-          <ShoppingCartModal />
         </CartProvider>
         {children}
       </body>

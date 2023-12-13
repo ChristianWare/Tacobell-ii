@@ -5,6 +5,7 @@ import Newest from "@/components/Newest/Newest";
 export default function Home() {
   return (
     <div>
+      
       <Newest />
     </div>
   );
