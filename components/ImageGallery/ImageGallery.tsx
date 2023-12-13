@@ -30,6 +30,7 @@ export default function ImageGallery({ images }: iAppProps) {
                 alt='image'
                 className={styles.img}
                 onClick={() => handleSmallImageClick(image)}
+                onMouseOver={() => handleSmallImageClick(image)}
               />
             </div>
           ))}

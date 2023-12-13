@@ -1,0 +1,15 @@
+.btnOne,
+.btnTwo {
+  padding: 2rem 3rem;
+  font-weight: 600;
+  background-color: blueviolet;
+  border: 1px solid blueviolet;
+  color: white;
+  margin-right: 2rem;
+  border-radius: 10px;
+}
+
+.btnTwo {
+  background-color: white;
+  color: blueviolet;
+}

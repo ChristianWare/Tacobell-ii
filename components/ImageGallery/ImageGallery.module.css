@@ -7,4 +7,10 @@
 .img {
   object-fit: cover;
   border-radius: 10px;
+  transition: opacity 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+.img:hover {
+  opacity: 0.4;
 }

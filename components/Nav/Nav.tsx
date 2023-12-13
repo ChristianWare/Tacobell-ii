@@ -46,19 +46,19 @@ function Nav() {
       href: "/",
     },
     {
-      text: "About",
+      text: "Menu",
       href: "/about",
     },
     {
-      text: "Features",
+      text: "News",
       href: "/features",
     },
     {
-      text: "Contact",
+      text: "About",
       href: "/contact",
     },
     {
-      text: "Blog",
+      text: "Contact",
       href: "/blog",
     },
   ];
@@ -104,9 +104,7 @@ function Nav() {
             />
           </div> */}
         </ul>
-        <div className={styles.cart}>
-            🛒
-        </div>
+        <div className={styles.cart}>🛒</div>
         {isOpen && (
           <div
             className={`${styles.overlay} ${
