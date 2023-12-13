@@ -1,0 +1,23 @@
+.container {
+  width: 175px;
+  height: 175px;
+  background-color: var(--yellow);
+  border-radius: 50%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  padding: 1rem;
+}
+
+.text {
+  font-family: var(--inter);
+  font-weight: 700;
+  letter-spacing: -1px;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--black);
+  user-select: none;
+}
+
