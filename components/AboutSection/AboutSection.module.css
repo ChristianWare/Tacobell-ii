@@ -1,0 +1,48 @@
+.container {
+  background-color: var(--black);
+}
+
+.labelContainer {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 3rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.heading {
+  color: var(--yellow);
+  text-align: center;
+}
+
+.span {
+  line-height: 120%;
+  color: var(--black); /* Transparent color */
+  text-shadow: 2px 2px 0 #fedf4b, -2px -2px 0 #fedf4b, 2px -2px 0 #fedf4b,
+    -2px 2px 0 #fedf4b;
+}
+
+.copy {
+  font-size: 1.7rem;
+  text-transform: uppercase;
+  color: var(--yellow);
+  margin-top: 3rem;
+  text-align: center;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (max-width: 968px) {
+  .copy {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .copy {
+    width: 100%;
+  }
+}

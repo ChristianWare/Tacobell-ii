@@ -20,6 +20,7 @@
   height: 100vh;
   position: relative;
   margin-top: -10rem;
+  background-color: transparent;
 }
 
 .heading {
@@ -46,6 +47,7 @@
   align-items: center;
   justify-content: center;
   gap: 3rem;
+  background-color: transparent;
 }
 
 @media screen and (max-width: 968px) {
@@ -55,11 +57,6 @@
 }
 
 @media screen and (max-width: 568px) {
-  .content {
-    height: 100%;
-    margin-top: 5rem;
-  }
-  
   .copy {
     margin-top: 2rem;
   }
