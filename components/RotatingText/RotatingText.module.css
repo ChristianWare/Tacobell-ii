@@ -1,7 +1,6 @@
 .container {
   width: 175px;
   height: 175px;
-  background-color: var(--yellow);
   border-radius: 50%;
   position: relative;
   display: flex;
@@ -9,6 +8,7 @@
   justify-content: center;
   user-select: none;
   padding: 1rem;
+  background-color: transparent;
 }
 
 .text {
@@ -21,3 +21,7 @@
   user-select: none;
 }
 
+.icon {
+  color: var(--yellow);
+  z-index: 10;
+}

@@ -13,7 +13,9 @@ const C1 = () => {
         <ContentPadding>
           <div className={styles.content}>
             <div className={styles.left}>
-              <Label text='A lot on your plate' />
+              <div className={styles.labelContainer}>
+                <Label text='A lot on your plate' />
+              </div>
               <h2 className={styles.heading}>
                 THE BEST STREET FOOD IN YOUR NECK OF THE WOODS
               </h2>
@@ -25,7 +27,6 @@ const C1 = () => {
               <div className={styles.rotatingTextContainer}>
                 <RotatingText text='Eat great even late !' />
               </div>
-             
             </div>
           </div>
         </ContentPadding>

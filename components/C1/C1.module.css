@@ -43,6 +43,19 @@
 @media screen and (max-width: 968px) {
   .content {
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .labelContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .heading {
+    text-align: center;
   }
 }
 

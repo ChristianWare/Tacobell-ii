@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import styles from "./RotatingText.module.css";
 import { FC } from "react";
+import Taco from "../../public/icons/taco.svg";
 
 interface RotatingTextProps {
   text: string;
@@ -33,9 +34,12 @@ const RotatingText: FC<RotatingTextProps> = ({ text }) => {
       className={styles.container}
       style={{
         transform: `rotate(${rotationAngle}deg)`,
+        transformOrigin: "center",
       }}
     >
-     <span className={styles.text}>{text}</span>
+      <span className={styles.text}>
+        <Taco className={styles.icon} width={100} height={100} />
+      </span>
     </div>
   );
 };

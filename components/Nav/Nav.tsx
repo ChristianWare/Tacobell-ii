@@ -4,7 +4,7 @@ import styles from "./Nav.module.css";
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-// import Button from "../Button/Button";
+import Taco from "../../public/icons/taco.svg";
 
 function Nav() {
   const [isOpen, setIsOpen] = useState(false);
@@ -96,7 +96,8 @@ function Nav() {
           ))}
         </ul>
         <Link href='/' className={styles.logo}>
-          TACO BELL{" "}
+          <Taco className={styles.icon} width={60} height={60} />
+          TACO BELL
         </Link>
         <Link href='/' className={styles.email}>
           hello@tacobell.com

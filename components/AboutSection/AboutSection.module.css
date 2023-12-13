@@ -2,14 +2,24 @@
   background-color: var(--black);
 }
 
+.content {
+  position: relative;
+}
+
+.icon {
+  color: var(--yellow);
+}
+
 .labelContainer {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 3rem;
   width: 100%;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 1rem;
 }
 
 .heading {
