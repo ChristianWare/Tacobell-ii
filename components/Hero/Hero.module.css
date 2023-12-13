@@ -1,0 +1,57 @@
+.container {
+  position: relative;
+  height: 100vh;
+}
+
+.imgOverlay {
+  z-index: 2;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(rgba(10, 7, 27, 0.7), rgba(10, 7, 27, 0.7));
+}
+
+.img {
+  object-fit: cover;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.heading {
+  z-index: 3;
+  text-align: center;
+  color: var(--yellow);
+  margin-top: 5rem;
+}
+
+.copy {
+  z-index: 3;
+  color: var(--yellow);
+  width: 80%;
+  font-weight: 500;
+  font-size: 1.8rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.btnContainer {
+  z-index: 3;
+  margin-top: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* width: 20%; */
+  gap: 3rem;
+}
+
+@media screen and (max-width: 968px) {
+  .copy {
+    width: 100%;
+  }
+}

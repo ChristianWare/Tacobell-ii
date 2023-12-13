@@ -1,6 +1,7 @@
 :root {
   --green: #aeff12;
   --green2: #dafc53;
+  --yellow: #FEDF4B;
   --gray: #f4f4f6;
   --black: #2a2a2a;
   --black2: #383838;
@@ -60,12 +61,12 @@ span {
 }
 
 h1 {
-  font-size: 9.5rem;
-  line-height: 0.9;
+  font-size: 17rem;
+  line-height:120%;
   font-weight: 700;
   font-family: var(--tuskerGrotesk);
   text-transform: uppercase;
-  letter-spacing: -1px;
+  /* letter-spacing: -1px; */
 }
 
 h2 {
@@ -144,6 +145,10 @@ input:focus {
 @media screen and (max-width: 568px) {
   html {
     font-size: 50%;
+  }
+
+  h1 {
+    font-size: 8rem;
   }
 
   p,

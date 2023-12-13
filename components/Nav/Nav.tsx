@@ -66,11 +66,6 @@ function Nav() {
   return (
     <header className={styles.header}>
       <nav className={styles.navbar}>
-        <div className={styles.logo}>
-          <Link href='/' className={styles.logo}>
-            CWA
-          </Link>
-        </div>
         <ul
           className={
             isOpen === false
@@ -97,7 +92,12 @@ function Nav() {
             </li>
           ))}
         </ul>
-        <div className={styles.cart}>🛒</div>
+        <Link href='/' className={styles.logo}>
+          TACO BELL{" "}
+        </Link>
+        <Link href='/' className={styles.email}>
+          Hello@tacobell.com
+        </Link>
         {isOpen && (
           <div
             className={`${styles.overlay} ${

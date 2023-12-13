@@ -1,0 +1,17 @@
+.layout {
+  z-index: 1000;
+  max-width: 1500px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 30px;
+  padding-left: 30px;
+  padding-top: 4rem;
+  padding-bottom: 10rem;
+}
+
+@media screen and (max-width: 568px) {
+  .layout {
+    padding-right: 5px;
+    padding-left: 5px;
+  }
+}

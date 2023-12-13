@@ -1,0 +1,150 @@
+.btn2Container {
+  width: 100%;
+}
+
+.btnContent {
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-align: center;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 2;
+  display: block;
+  padding: 1rem 6rem;
+  transition: all 0.2s ease-in;
+  white-space: nowrap;
+}
+
+.primary,
+.secondary {
+  position: relative;
+  display: block;
+  margin-bottom: 3rem;
+  padding: 0.7rem;
+  width: 100%;
+  cursor: pointer;
+  border: 0;
+  background-color: transparent;
+  transition: all 0.2s ease-in;
+}
+
+.primary:hover {
+  color: var(--yellow);
+  transition: all 0.2s ease-in;
+}
+
+.secondary:hover {
+  color: var(--yellow);
+}
+
+.primary::before,
+.primary::after,
+.secondary::before,
+.secondary::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: calc(50% - 0.4rem);
+  border: 3px solid var(--yellow);
+  background-color: transparent;
+}
+
+.primary::before,
+.secondary::before {
+  top: 0;
+  border-bottom: 0;
+}
+
+.primary::after,
+.secondary::after {
+  bottom: 0;
+  border-top: 0;
+}
+
+.btnInner {
+  overflow: hidden;
+  position: relative;
+  margin: 0;
+}
+
+.primary .btnInner {
+  border: 1px solid var(--yellow);
+  background-color: transparent;
+  margin-right: -0.6rem;
+}
+
+.secondary .btnInner {
+  border: 1px solid var(--yellow);
+  background-color: var(--white);
+  margin-right: -0.6rem;
+}
+
+.btnInner::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.btnSlide {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: -5%;
+  width: 110%;
+  height: 100%;
+  transform: skew(-10deg) translateX(-100%);
+  background-color: var(--yellow);
+  transition: all 0.2s ease-in;
+}
+
+.primary .btnSlide,
+.secondary .btnSlide {
+  background-color: var(--yellow);
+}
+
+.primary .btnContent {
+  color: var(--yellow);
+}
+
+.secondary .btnContent {
+  color: var(--black);
+}
+
+.btnContent:hover {
+  color: var(--black);
+}
+
+.primary:hover .btnSlide {
+  transform: skew(-10deg) translateX(0);
+}
+
+.secondary:hover .btnSlide {
+  transform: skew(-10deg) translateX(0);
+}
+
+.btnContent::after {
+  content: "";
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+  display: block;
+  width: 0.6rem;
+  height: 0.6rem;
+  background-color: var(--yellow);
+  transition: all 0.2s ease-in;
+}
+
+.primary:hover .btnContent::after {
+  background-color: var(--black);
+}
+
+.secondary:hover .btnContent::after {
+  background-color: var(--black);
+}
