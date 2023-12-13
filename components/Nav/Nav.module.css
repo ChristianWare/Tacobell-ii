@@ -23,6 +23,15 @@
   margin-top: 1rem;
 }
 
+.logoMobile {
+  font-size: 4.2rem;
+  color: var(--yellow);
+  font-family: var(--tuskerGrotesk);
+  font-weight: 700;
+  z-index: 998;
+  display: none;
+}
+
 .email {
   z-index: 998;
   color: var(--yellow);
@@ -50,9 +59,10 @@
 }
 
 .navItem {
-  font-size: 1.7rem;
+  font-size: 1.6rem;
   color: var(--yellow);
   position: relative;
+  font-weight: 600;
   user-select: none;
   transition: all 0.3s ease-in;
   scroll-behavior: smooth;
@@ -61,14 +71,12 @@
   font-family: var(--staatliches);
 }
 
-.activeLink {
-  font-weight: 700;
+/* .activeLink {
   color: var(--black);
   background-color: var(--yellow);
   padding: 5px 20px;
   border-radius: 50px;
-
-}
+} */
 
 .bottom {
   display: none;
@@ -129,8 +137,16 @@
 
 @media screen and (max-width: 968px) {
   .navbar {
-    justify-content: flex-end;
+    justify-content: space-between;
     padding: 2rem 3rem;
+  }
+
+  .logo {
+    display: none;
+  }
+
+  .logoMobile {
+    display: block;
   }
 
   .overlay {
@@ -158,6 +174,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+    gap: 0;
     width: 100%;
     height: 100%;
     transition: 0.3s all ease-in;

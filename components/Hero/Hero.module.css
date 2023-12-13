@@ -1,11 +1,8 @@
-.container {
-  position: relative;
-  height: 100vh;
-}
-
 .imgOverlay {
   z-index: 2;
   position: absolute;
+  top: 0;
+  left: 0;
   height: 100%;
   width: 100%;
   background: linear-gradient(rgba(10, 7, 27, 0.7), rgba(10, 7, 27, 0.7));
@@ -20,22 +17,24 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100%;
+  height: 100vh;
+  position: relative;
+  margin-top: -10rem;
 }
 
 .heading {
   z-index: 3;
   text-align: center;
   color: var(--yellow);
-  margin-top: 5rem;
+  margin: 0;
 }
 
 .copy {
   z-index: 3;
   color: var(--yellow);
-  width: 80%;
+  width: 70%;
   font-weight: 500;
-  font-size: 1.8rem;
+  font-size: 1.7rem;
   text-align: center;
   text-transform: uppercase;
 }
@@ -46,12 +45,28 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  /* width: 20%; */
   gap: 3rem;
 }
 
 @media screen and (max-width: 968px) {
   .copy {
     width: 100%;
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .content {
+    height: 100%;
+    margin-top: 5rem;
+  }
+  
+  .copy {
+    margin-top: 2rem;
+  }
+  .btnContainer {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    width: 100%;
+    grid-gap: 0;
   }
 }

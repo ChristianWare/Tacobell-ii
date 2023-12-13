@@ -66,6 +66,9 @@ function Nav() {
   return (
     <header className={styles.header}>
       <nav className={styles.navbar}>
+        <Link href='/' className={styles.logoMobile}>
+          TACO BELL{" "}
+        </Link>
         <ul
           className={
             isOpen === false
@@ -96,7 +99,7 @@ function Nav() {
           TACO BELL{" "}
         </Link>
         <Link href='/' className={styles.email}>
-          Hello@tacobell.com
+          hello@tacobell.com
         </Link>
         {isOpen && (
           <div
