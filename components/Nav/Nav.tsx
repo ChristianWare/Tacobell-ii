@@ -96,13 +96,6 @@ function Nav() {
               </Link>
             </li>
           ))}
-          {/* <div className={styles.btnContainer}>
-            <Button
-              href='tel:+4806236780'
-              text='480-623-6780'
-              btnType='navBtn'
-            />
-          </div> */}
         </ul>
         <div className={styles.cart}>🛒</div>
         {isOpen && (
