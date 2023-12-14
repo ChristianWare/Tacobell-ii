@@ -75,7 +75,6 @@
   position: relative;
   font-weight: 600;
   user-select: none;
-  transition: all 0.3s ease-in;
   scroll-behavior: smooth;
   z-index: 998;
   text-transform: uppercase;

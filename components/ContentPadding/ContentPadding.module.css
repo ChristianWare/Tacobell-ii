@@ -1,6 +1,7 @@
 .container {
   padding: 5rem;
   padding-top: 4rem;
+  background-color: transparent;
 }
 
 @media screen and (max-width: 870px) {
