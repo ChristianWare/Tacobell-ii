@@ -10,6 +10,7 @@ import ContentPadding from "../ContentPadding/ContentPadding";
 import Nacho from "../../public/icons/nachos.svg";
 import Button from "../Button/Button";
 import Label from "../Label/Label";
+import RotatingText from "../RotatingText/RotatingText";
 
 async function getData() {
   const query = `*[_type == "product"][0...3] | order(_createdAt desc) {
@@ -69,6 +70,9 @@ export default async function Newest() {
         </div>
         <div className={styles.btnContainer}>
           <Button href='/menu' btnType='secondary' text='See All' />
+        </div>
+        <div className={styles.rotatingTextContainer}>
+          <RotatingText />
         </div>
       </ContentPadding>
     </LayoutWrapper>

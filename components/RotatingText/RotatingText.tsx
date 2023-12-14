@@ -2,16 +2,9 @@
 
 import { useEffect, useState } from "react";
 import styles from "./RotatingText.module.css";
-import { FC } from "react";
 import Taco from "../../public/icons/taco.svg";
 
-interface RotatingTextProps {
-  text: string;
-  showArrow?: boolean;
-  showEmoji?: boolean;
-}
-
-const RotatingText: FC<RotatingTextProps> = ({ text }) => {
+const RotatingText = () => {
   const [rotationAngle, setRotationAngle] = useState(0);
 
   useEffect(() => {

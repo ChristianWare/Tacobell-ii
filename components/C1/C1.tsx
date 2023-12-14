@@ -25,7 +25,7 @@ const C1 = () => {
                 <Image src={Img} alt='image' fill className={styles.img} />
               </div>
               <div className={styles.rotatingTextContainer}>
-                <RotatingText text='Eat great even late !' />
+                <RotatingText />
               </div>
             </div>
           </div>
