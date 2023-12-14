@@ -2,6 +2,7 @@
   position: relative;
   z-index: 1;
   cursor: pointer;
+  background-color: var(--yellow);
 }
 
 .btn {
@@ -25,7 +26,7 @@
   width: 100%;
   color: var(--black);
   background-color: var(--yellow);
-  border: 1px solid var(--yellow);
+  border: 2px solid var(--black);
 }
 
 .btn:hover {

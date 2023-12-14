@@ -47,22 +47,22 @@ export default async function Newest() {
         </div>
         <div className={styles.bottom}>
           {data.map((product) => (
-            <div key={product._id}>
-              <Label text={product.categoryName} />
+            <Link href={`/product/${product.slug}`} key={product._id}>
               <div className={styles.imgContainer}>
+                <div className={styles.imgOverlay}></div>
                 <Image
                   src={product.imageUrl}
                   alt='image'
                   fill
                   className={styles.img}
                 />
-                L
+                <div className={styles.labelContainer}></div>
+                <Link href={`/product/${product.slug}`}>
+                  <h3 className={styles.productName}>{product.name}</h3>
+                </Link>
+                <p className={styles.price}>${product.price}</p>
               </div>
-              <Link href={`/product/${product.slug}`}>
-                <h3 className={styles.productName}>{product.name}</h3>
-              </Link>
-              <p className={styles.price}>${product.price}</p>
-            </div>
+            </Link>
           ))}
         </div>
         <div className={styles.btnContainer}>

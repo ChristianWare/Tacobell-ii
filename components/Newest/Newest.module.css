@@ -40,6 +40,16 @@
   margin-top: 5rem;
 }
 
+.imgOverlay {
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(rgba(10, 7, 27, 0.7), rgba(10, 7, 27, 0.7));
+}
+
 .imgContainer {
   position: relative;
   width: 100%;
@@ -64,11 +74,20 @@
 .productName {
   color: var(--yellow);
   margin-top: 3rem;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 3;
 }
+
 
 .categoryName,
 .price {
   color: var(--yellow);
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 3;
 }
 
 .btnContainer {

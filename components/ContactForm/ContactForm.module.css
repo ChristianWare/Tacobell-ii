@@ -1,5 +1,5 @@
 .content {
-  background-color: transparent;
+  background-color: var(--yellow);
   padding: 3rem;
 }
 
@@ -66,7 +66,7 @@
 .labelInputBox label {
   font-size: 1.4rem;
   font-weight: 600;
-  color: var(--tan);
+  color: var(--black);
   opacity: 0.8;
   padding-left: 0.3rem;
   background-color: transparent;
@@ -75,11 +75,11 @@
 .labelInputBox input,
 .labelInputBox textarea {
   border-radius: 5px;
-  border: 2px solid var(--yellow);
+  border: 2px solid var(--black);
   height: 40px;
   width: 100%;
   background-color: var(--tan);
-  color: var(--text);
+  color: var(--black2);
   padding: 1rem;
   width: 100%;
   font-weight: 400;
