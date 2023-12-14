@@ -13,7 +13,7 @@ import Label from "../Label/Label";
 import RotatingText from "../RotatingText/RotatingText";
 
 async function getData() {
-  const query = `*[_type == "product"][0...3] | order(_createdAt desc) {
+  const query = `*[_type == "product"] | order(_createdAt desc) {
   _id,
     price,
     name,
@@ -36,16 +36,13 @@ export default async function Newest() {
         <div className={styles.top}>
           <Nacho className={styles.icon} width={200} height={200} />
           <h2 className={styles.heading}>
-            Lets <span className={styles.span}>Taco&apos; bout</span> Our Newest
-            Products
+            Lets <span className={styles.span}>Taco&apos; bout</span> Our Menu
           </h2>
           <div className={styles.copy}>
             Indulge in a diverse array of innovative flavors at Taco Bell, where
             our latest menu offerings feature exciting creations like loaded
             MexiFries, crave-worthy Crunchwrap Sliders, and bold Korean BBQ
-            Tacos. Embark on a culinary adventure that invites you to savor the
-            vibrant tastes of our newly introduced delights, showcasing a fusion
-            of bold and delicious options.
+            Tacos.
           </div>
         </div>
         <div className={styles.bottom}>
