@@ -2,6 +2,7 @@
 
 import { urlFor } from "@/app/lib/sanity";
 import Image from "next/image";
+import Img from "../../public/images/bgimg.jpeg";
 import styles from "./ImageGallery.module.css";
 import { useState } from "react";
 
@@ -17,17 +18,15 @@ export default function ImageGallery({ images }: iAppProps) {
   };
 
   return (
-    <div>
-      <h1>Hey</h1>
-      <div className={styles.container}>
+    <div className={styles.container}>
+      <div className={styles.content}>
         <div className={styles.left}>
           {images.map((image: any, idx: any) => (
-            <div key={idx}>
+            <div key={idx} className={styles.imgContainer}>
               <Image
                 src={urlFor(image).url()}
-                width={200}
-                height={200}
                 alt='image'
+                fill
                 className={styles.img}
                 onClick={() => handleSmallImageClick(image)}
                 onMouseOver={() => handleSmallImageClick(image)}
@@ -36,13 +35,14 @@ export default function ImageGallery({ images }: iAppProps) {
           ))}
         </div>
         <div className={styles.right}>
-          <Image
-            src={urlFor(bigImage).url()}
-            alt='Photo'
-            width={500}
-            height={500}
-            className={styles.img}
-          />
+          <div className={styles.imgContainerii}>
+            <Image
+              src={urlFor(bigImage).url()}
+              alt='Photo'
+              fill
+              className={styles.imgii}
+            />
+          </div>
         </div>
       </div>
     </div>

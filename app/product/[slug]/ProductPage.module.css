@@ -1,15 +1,43 @@
-.btnOne,
-.btnTwo {
-  padding: 2rem 3rem;
-  font-weight: 600;
-  background-color: blueviolet;
-  border: 1px solid blueviolet;
-  color: white;
-  margin-right: 2rem;
-  border-radius: 10px;
+.container {
+  background-color: var(--black);
 }
 
-.btnTwo {
-  background-color: white;
-  color: blueviolet;
+.top {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 3rem;
+  margin-top: 5rem;
+}
+
+.heading {
+  color: var(--yellow);
+  font-size: 10rem;
+}
+
+.price {
+  font-weight: 600;
+}
+
+.price,
+.description {
+  color: var(--yellow);
+  font-size: 1.7rem;
+  text-transform: uppercase;
+  color: var(--yellow);
+  margin-top: 2rem;
+}
+
+@media screen and (max-width: 1000px) {
+  .top {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .right {
+    order: -1;
+  }
+
+}
+
+@media screen and (max-width: 768px) {
+
 }

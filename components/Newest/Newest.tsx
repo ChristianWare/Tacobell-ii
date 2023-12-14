@@ -9,8 +9,8 @@ import LayoutWrapper from "../LayoutWrapper";
 import ContentPadding from "../ContentPadding/ContentPadding";
 import Nacho from "../../public/icons/nachos.svg";
 import Button from "../Button/Button";
-import Label from "../Label/Label";
 import RotatingText from "../RotatingText/RotatingText";
+import Label from "../Label/Label";
 
 async function getData() {
   const query = `*[_type == "product"] | order(_createdAt desc) {
@@ -56,18 +56,29 @@ export default async function Newest() {
                   fill
                   className={styles.img}
                 />
-                <div className={styles.labelContainer}></div>
-                <Link href={`/product/${product.slug}`}>
-                  <h3 className={styles.productName}>{product.name}</h3>
-                </Link>
-                <p className={styles.price}>${product.price}</p>
+                <div className={styles.details}>
+                  <p className={styles.price}>${product.price}</p>
+                  <Link href={`/product/${product.slug}`}>
+                    <h3 className={styles.productName}>{product.name}</h3>
+                  </Link>
+                    <p className={styles.categoryName}>
+                      {product.categoryName}
+                    </p>
+                  <div className={styles.btnContainer}>
+                    <Button
+                      href={`/product/${product.slug}`}
+                      btnType='secondary'
+                      text='More Details'
+                    />
+                  </div>
+                </div>
               </div>
             </div>
           ))}
         </div>
-        <div className={styles.btnContainer}>
+        {/* <div className={styles.btnContainer}>
           <Button href='/menu' btnType='secondary' text='See All' />
-        </div>
+        </div> */}
         <div className={styles.rotatingTextContainer}>
           <RotatingText />
         </div>
