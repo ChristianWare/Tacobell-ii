@@ -8,6 +8,8 @@ import Image from "next/image";
 import LayoutWrapper from "../LayoutWrapper";
 import ContentPadding from "../ContentPadding/ContentPadding";
 import Nacho from "../../public/icons/nachos.svg";
+import Button from "../Button/Button";
+import Label from "../Label/Label";
 
 async function getData() {
   const query = `*[_type == "product"][0...3] | order(_createdAt desc) {
@@ -46,9 +48,9 @@ export default async function Newest() {
           </div>
         </div>
         <div className={styles.bottom}>
-          <Link href='/products'>See All</Link>
           {data.map((product) => (
             <div key={product._id}>
+              <Label text={product.categoryName} />
               <div className={styles.imgContainer}>
                 <Image
                   src={product.imageUrl}
@@ -56,14 +58,17 @@ export default async function Newest() {
                   fill
                   className={styles.img}
                 />
+                L
               </div>
               <Link href={`/product/${product.slug}`}>
-                <h3>{product.name}</h3>
+                <h3 className={styles.productName}>{product.name}</h3>
               </Link>
-              <p>{product.categoryName}</p>
-              <p>${product.price}</p>
+              <p className={styles.price}>${product.price}</p>
             </div>
           ))}
+        </div>
+        <div className={styles.btnContainer}>
+          <Button href='/menu' btnType='secondary' text='See All' />
         </div>
       </ContentPadding>
     </LayoutWrapper>
