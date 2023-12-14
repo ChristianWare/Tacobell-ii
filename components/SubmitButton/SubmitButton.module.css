@@ -1,0 +1,40 @@
+.container {
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.btn {
+  cursor: pointer;
+  text-align: center;
+  font-size: 1.6rem;
+  white-space: nowrap;
+  border-radius: 5px;
+  user-select: none;
+  transition: all 0.1s ease-in;
+  display: inline-block;
+  padding: 10px 30px;
+  font-weight: 700;
+  font-family: var(--inter700);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  color: var(--black);
+  background-color: var(--yellow);
+  border: 1px solid var(--yellow);
+}
+
+.btn:hover {
+  background-color: transparent;
+  color: var(--green);
+}
+
+@media screen and (max-width: 768px) {
+  .btn {
+    font-size: 2rem;
+  }
+}

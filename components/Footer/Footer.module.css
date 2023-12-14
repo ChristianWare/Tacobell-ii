@@ -1,0 +1,165 @@
+.container {
+  margin-top: 3rem;
+  background-color: transparent;
+}
+
+.layoutWrapper {
+  background-color: transparent;
+  z-index: 1000;
+  max-width: 1500px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 30px;
+  padding-left: 30px;
+}
+
+.contentPadding {
+  padding: 5rem;
+  padding-bottom: 0rem;
+  background-color: transparent;
+}
+
+.content {
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.copy {
+  color: var(--text2);
+  hyphens: auto;
+  font-size: 1.3rem;
+  margin-top: 1rem;
+  height: fit-content;
+}
+
+.right {
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+}
+
+.middleDesktop {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 2rem;
+  background-color: transparent;
+}
+
+.headingContainer {
+  background-color: transparent;
+}
+
+.heading {
+  font-weight: 600;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  user-select: none;
+}
+
+.bottomDesktop {
+  background-color: transparent;
+  border-top: 1px solid var(--black);
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.bottomLeft {
+  background-color: transparent;
+}
+
+.copy {
+  color: var(--black);
+  font: 1.2rem;
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.lb2 {
+  background-color: transparent;
+  padding: 2rem;
+  font-size: 0;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.icon {
+  color: var(--black);
+}
+
+@media screen and (max-width: 1068px) {
+  .top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media screen and (max-width: 968px) {
+  .right {
+    align-items: center;
+    margin-top: 3rem;
+  }
+}
+
+@media screen and (max-width: 870px) {
+  .contentPadding {
+    padding: 3rem;
+    padding-top: 5rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .right {
+    flex-direction: column;
+  }
+
+  .bottomDesktop {
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .layoutWrapper {
+    padding-right: 5px;
+    padding-left: 5px;
+  }
+
+  .contentPadding {
+    padding: 3rem 2rem;
+  }
+
+  .heading {
+    font-size: 1.8rem;
+  }
+
+  .leftBorder3 {
+    display: block;
+    margin-top: 3rem;
+  }
+
+  .heading {
+    font-size: 1.4rem;
+  }
+
+  .bottom {
+    border-top: none;
+    display: grid;
+    grid-template-columns: 1fr;
+    place-items: center;
+    margin-top: 2rem;
+  }
+
+  .copy {
+    text-align: center;
+  }
+}

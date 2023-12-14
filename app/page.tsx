@@ -5,6 +5,7 @@ import C1 from "@/components/C1/C1";
 import C2 from "@/components/C2/C2";
 import Delivery from "@/components/Delivery/Delivery";
 import InstaFeed from "@/components/InstaFeed/InstaFeed";
+import FinalCta from "@/components/FinalCta/FinalCta";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <C2 />
       <Delivery />
       <InstaFeed />
+      <FinalCta />
     </div>
   );
 }

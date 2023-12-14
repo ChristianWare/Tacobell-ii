@@ -1,0 +1,26 @@
+.progressWrapper {
+  background-color: transparent;
+  height: 15px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+  transition: none;
+}
+
+.progressMainStyle {
+  height: 4px;
+  background-color: var(--green);
+  transition: none;
+}
+
+@media screen and (max-width: 480px) {
+  .progressWrapper {
+    height: 7.5px;
+  }
+
+  .progressMainStyle {
+    height: 7.5px;
+  }
+}

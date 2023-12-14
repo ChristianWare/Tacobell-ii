@@ -1,0 +1,162 @@
+.content {
+  background-color: transparent;
+  padding: 3rem;
+}
+
+.bottom {
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.left,
+.right {
+  background-color: transparent;
+  flex: 1;
+  width: 100%;
+}
+
+.left {
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+
+.copy {
+  opacity: 0.7;
+  font-weight: 400;
+  width: 70%;
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+  font-size: 1.6rem;
+}
+
+.form {
+  width: 100%;
+  background-color: transparent;
+}
+
+.namesContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+  width: 100%;
+  background-color: transparent;
+}
+
+.everythingElse {
+  background-color: transparent;
+}
+
+.labelInputBox {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  margin-bottom: 1.5rem;
+  flex: 1;
+  width: 100%;
+  background-color: transparent;
+}
+
+.labelInputBox label {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--tan);
+  opacity: 0.8;
+  padding-left: 0.3rem;
+  background-color: transparent;
+}
+
+.labelInputBox input,
+.labelInputBox textarea {
+  border-radius: 5px;
+  border: 1px solid var(--yellow);
+  height: 40px;
+  width: 100%;
+  background-color: var(--tan);
+  color: var(--text);
+  padding: 1rem;
+  width: 100%;
+  font-weight: 400;
+  inset: none;
+  background-color: transparent;
+}
+
+.labelInputBox span {
+  font-size: 1.4rem;
+  color: rgb(140, 139, 139);
+  
+}
+
+.labelInputBox textarea {
+  height: 130px;
+  resize: vertical;
+}
+
+.required {
+  color: var(--green) !important;
+}
+
+.btnBtnContainer {
+  margin-top: 3rem;
+}
+
+
+@media screen and (max-width: 1100px) {
+  .left {
+    align-items: center;
+    justify-content: center;
+  }
+
+  .circleContainer {
+    margin-left: 0rem;
+  }
+
+  .copy {
+    width: 100%;
+    text-align: center;
+  }
+
+  .rtContainer {
+    margin-top: 5rem;
+  }
+
+  .bottom {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .form {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .container::after {
+    width: 100px;
+    height: 100px;
+    background-color: var(--accent2);
+    z-index: -1;
+  }
+
+  .container::before {
+    width: 100px;
+    height: 100px;
+    background-color: var(--accent1);
+  }
+
+  .namesContainer {
+    flex-direction: column;
+    gap: 0rem;
+  }
+
+  .btnBtnContainer {
+    display: grid;
+    width: 100%;
+  }
+}
