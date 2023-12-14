@@ -90,7 +90,6 @@
 .labelInputBox span {
   font-size: 1.4rem;
   color: rgb(140, 139, 139);
-  
 }
 
 .labelInputBox textarea {
@@ -104,8 +103,8 @@
 
 .btnBtnContainer {
   margin-top: 3rem;
+  background-color: var(--yellow);
 }
-
 
 @media screen and (max-width: 1100px) {
   .left {

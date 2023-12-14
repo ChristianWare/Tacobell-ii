@@ -5,7 +5,6 @@ import Footer from "../Footer/Footer";
 import styles from "./FinalCta.module.css";
 // import { fadeIn } from "../../../animation/variants";
 // import { motion } from "framer-motion";
-import Label from "../Label/Label";
 
 const FinalCta = () => {
   return (
@@ -25,6 +24,7 @@ const FinalCta = () => {
                   advantage of the benefits of having your own direct booking
                   website for your rental property.
                 </p>
+              
               </div>
               <div className={styles.right}>
                 <div>

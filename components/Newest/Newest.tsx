@@ -47,7 +47,7 @@ export default async function Newest() {
         </div>
         <div className={styles.bottom}>
           {data.map((product) => (
-            <Link href={`/product/${product.slug}`} key={product._id}>
+            <div key={product._id}>
               <div className={styles.imgContainer}>
                 <div className={styles.imgOverlay}></div>
                 <Image
@@ -62,7 +62,7 @@ export default async function Newest() {
                 </Link>
                 <p className={styles.price}>${product.price}</p>
               </div>
-            </Link>
+            </div>
           ))}
         </div>
         <div className={styles.btnContainer}>

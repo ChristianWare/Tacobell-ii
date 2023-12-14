@@ -3,6 +3,7 @@
   z-index: 1;
   cursor: pointer;
   background-color: var(--yellow);
+  border-radius: 5px;
 }
 
 .btn {

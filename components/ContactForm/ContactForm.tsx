@@ -5,6 +5,7 @@ import { useState } from "react";
 import toast from "react-hot-toast";
 import SubmitButton from "../SubmitButton/SubmitButton";
 import { sendEmail } from "@/actions/sendEmail";
+import RotatingText from "../RotatingText/RotatingText";
 
 const ContactForm = () => {
   const [inputs, setInputs] = useState({
@@ -107,6 +108,7 @@ const ContactForm = () => {
             </div>
           </form>
         </div>
+          
       </div>
     </div>
   );
