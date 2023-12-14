@@ -25,12 +25,13 @@
 .heading {
   color: var(--yellow);
   text-align: center;
+  font-size: 10rem;
 }
 
 .span {
   line-height: 120%;
   letter-spacing: 5px;
-  color: var(--black); /* Transparent color */
+  color: var(--black);
   text-shadow: 2px 2px 0 #fedf4b, -2px -2px 0 #fedf4b, 2px -2px 0 #fedf4b,
     -2px 2px 0 #fedf4b;
 }
@@ -55,5 +56,11 @@
 @media screen and (max-width: 768px) {
   .copy {
     width: 100%;
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .heading {
+    font-size: 6.5rem;
   }
 }

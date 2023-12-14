@@ -1,6 +1,5 @@
 :root {
-  --green: #aeff12;
-  --green2: #dafc53;
+
   --yellow: #fedf4b;
   --gray: #f4f4f6;
   --black: #2a2a2a;
@@ -73,7 +72,7 @@ h1 {
 }
 
 h2 {
-  font-size: 10rem;
+  font-size: 8rem;
   line-height: 120%;
   letter-spacing: 1px;
 }
@@ -164,7 +163,7 @@ input:focus {
   }
 
   h2 {
-    font-size: 6.5rem;
+    font-size: 6rem;
   }
 
   p,

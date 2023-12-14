@@ -157,7 +157,14 @@
   }
 
   .logoMobile {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .iconii {
+    transform: rotate(180deg);
   }
 
   .overlay {

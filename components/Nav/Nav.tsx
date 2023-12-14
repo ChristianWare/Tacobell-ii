@@ -67,7 +67,7 @@ function Nav() {
     <header className={styles.header}>
       <nav className={styles.navbar}>
         <Link href='/' className={styles.logoMobile}>
-          TACO BELL{" "}
+          TACO BELL <Taco className={styles.iconii} width={80} height={80} />
         </Link>
         <ul
           className={
