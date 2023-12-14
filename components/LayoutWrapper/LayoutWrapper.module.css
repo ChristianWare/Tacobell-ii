@@ -6,8 +6,13 @@
   padding-right: 30px;
   padding-left: 30px;
   padding-top: 4rem;
-  margin-bottom: 15rem;
+  padding-bottom: 15rem;
   background-color: transparent;
+}
+
+.yellow {
+  background-color: var(--yellow);
+
 }
 
 @media screen and (max-width: 568px) {

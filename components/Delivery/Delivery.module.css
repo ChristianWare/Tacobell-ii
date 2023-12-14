@@ -1,0 +1,33 @@
+.container {
+  background-color: var(--white);
+}
+
+.top,
+.bottom {
+  background-color: transparent;
+}
+
+.heading {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+}
+
+.bottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+  margin-top: 5rem;
+}
+
+.icon {
+  color: var(--black);
+}
+
+@media screen and (max-width: 480px) {
+  .bottom {
+    flex-wrap: wrap;
+  }
+}
