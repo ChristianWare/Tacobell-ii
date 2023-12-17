@@ -1,6 +1,6 @@
-import Image from 'next/image';
-import styles from './ImageGrid.module.css'
-import Img from '../../public/images/img1.png'
+import Image from "next/image";
+import styles from "./ImageGrid.module.css";
+import Img from "../../public/images/img1.png";
 
 const ImageGrid = () => {
   return (
@@ -12,6 +12,7 @@ const ImageGrid = () => {
             alt='drone image 2'
             layout='fill'
             objectFit='cover'
+            className={styles.img}
           />
         </div>
         <div className={styles.box2}>
@@ -20,14 +21,15 @@ const ImageGrid = () => {
             alt='drone image 2'
             layout='fill'
             objectFit='cover'
+            className={styles.img}
           />
         </div>
         <div className={styles.box3}>
-          <h5>Skydio 2+</h5>
+          <h5>Nacho Fries</h5>
         </div>
 
         <div className={styles.box4}>
-          <h5>DJI Mini SE</h5>
+          <h5>Challupas</h5>
           <a></a>
         </div>
 
@@ -37,6 +39,7 @@ const ImageGrid = () => {
             alt='drone image 3'
             layout='fill'
             objectFit='cover'
+            className={styles.img}
           />
         </div>
       </div>
@@ -47,10 +50,11 @@ const ImageGrid = () => {
             alt='drone image 4'
             layout='fill'
             objectFit='cover'
+            className={styles.img}
           />
         </div>
         <div className={styles.box2B}>
-          <h5>EXO Cinemaster 2</h5>
+          <h5>Crunchwrap Supreme</h5>
         </div>
         <div className={styles.box3B}>
           <Image
@@ -58,10 +62,11 @@ const ImageGrid = () => {
             alt='drone image 5'
             layout='fill'
             objectFit='cover'
+            className={styles.img}
           />
         </div>
         <div className={styles.box4B}>
-          <h5>Matrice 300</h5>
+          <h5>Gordita Crunch</h5>
         </div>
         <div className={styles.box5B}>
           <Image
@@ -69,10 +74,11 @@ const ImageGrid = () => {
             alt='drone image 6'
             layout='fill'
             objectFit='cover'
+            className={styles.img}
           />
         </div>
       </div>
     </div>
   );
-}
-export default ImageGrid
+};
+export default ImageGrid;
