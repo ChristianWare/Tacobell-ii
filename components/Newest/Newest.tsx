@@ -10,7 +10,6 @@ import ContentPadding from "../ContentPadding/ContentPadding";
 import Nacho from "../../public/icons/nachos.svg";
 import Button from "../Button/Button";
 import RotatingText from "../RotatingText/RotatingText";
-import Label from "../Label/Label";
 
 async function getData() {
   const query = `*[_type == "product"] | order(_createdAt desc) {
@@ -61,9 +60,7 @@ export default async function Newest() {
                   <Link href={`/product/${product.slug}`}>
                     <h3 className={styles.productName}>{product.name}</h3>
                   </Link>
-                    <p className={styles.categoryName}>
-                      {product.categoryName}
-                    </p>
+                  <p className={styles.categoryName}>{product.categoryName}</p>
                   <div className={styles.btnContainer}>
                     <Button
                       href={`/product/${product.slug}`}

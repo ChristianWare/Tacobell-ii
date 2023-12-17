@@ -1,7 +1,6 @@
 import { fullProduct } from "@/app/interface";
 import { client } from "@/app/lib/sanity";
 import ImageGallery from "@/components/ImageGallery/ImageGallery";
-import { useState } from "react";
 import styles from "./ProductPage.module.css";
 import LayoutWrapper from "@/components/LayoutWrapper";
 import ContentPadding from "@/components/ContentPadding/ContentPadding";

@@ -2,7 +2,6 @@
 
 import { urlFor } from "@/app/lib/sanity";
 import Image from "next/image";
-import Img from "../../public/images/bgimg.jpeg";
 import styles from "./ImageGallery.module.css";
 import { useState } from "react";
 
