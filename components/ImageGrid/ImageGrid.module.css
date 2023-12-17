@@ -1,0 +1,149 @@
+.boxContainer {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-areas: 
+        "one two three"
+        "one four five";
+    grid-template-columns: 50% 30% 20%;
+    padding-bottom: 1rem;
+    overflow: hidden;
+}
+
+.boxContainer h5,
+.boxContainer2 h5 {
+    font-family: var(--tuskerGrotesk);
+    font-size: 4rem;
+}
+
+.box1 {
+    grid-area: one;
+    height: 270px;
+}
+
+.box1,
+.box2, 
+.box3,
+.box4, 
+.box5,
+.box1B,
+.box2B,
+.box3B,
+.box4B,
+.box5B
+{
+    position: relative;  
+}
+
+.box3,
+.box4B {
+    background-color: var(--purple);
+    color: var(--yellow);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 3rem 3rem 1rem 2rem ;
+}
+
+.box3 {
+    background-color: var(--yellow);
+}
+
+.box2B {
+   background-color: var(--purple);
+   color: var(--purple);
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+   justify-content: space-between;
+   padding: 3rem 3rem 1rem 2rem;
+}
+
+.box4
+{
+    background-color: var(--purple);
+    color: var(--purple);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 3rem 3rem 1rem 2rem;
+}
+
+.boxContainer2 {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-areas: 
+    "oneB twoB threeB"
+    "fourB fiveB threeB";
+    grid-template-columns: 25% 30% 45%;
+    overflow: hidden;
+}
+
+.box1B {
+    grid-area: twoB;
+}
+.box2B {
+    grid-area: oneB ;
+    background-color: var(--purple);
+}
+.box3B {
+    grid-area: threeB;
+    grid-area: threeB;
+    height: 270px;
+}
+.box4B {
+    grid-area: fiveB;
+}
+.box5B {
+    grid-area: fourB ;
+}
+
+.btnContainer {
+    display: flex;
+    margin-top: 3rem;
+}
+
+@media screen and (max-width: 868px) {
+    .boxContainer {
+        grid-template-areas:
+            "one one"
+            "two three"
+            "four five";
+        grid-template-columns: 50% 50%;
+        padding: 0 0 1rem 0;
+    }
+
+    .boxContainer2 {
+        display: grid;
+        grid-gap: 1rem;
+        grid-template-areas:
+            "threeB threeB"
+            "oneB twoB"
+            "fourB fiveB";
+        grid-template-columns: 50% 50%;
+        padding: 0 0 1rem 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .topContainer {
+        margin-bottom: 4rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .topContainer {
+        margin-bottom: 5.5rem;
+    }
+
+    .content {
+        padding: 2rem;
+    }
+}
+
+@media screen and (max-width: 328px) {
+    .topContainer {
+        margin-bottom: -1.5rem;
+    }
+}

@@ -4,7 +4,8 @@ import styles from "./C1.module.css";
 import Image from "next/image";
 import Img from "../../public/images/bgimg.jpeg";
 import Label from "../Label/Label";
-import RotatingText from "../RotatingText/RotatingText";
+import ImageGrid from "../ImageGrid/ImageGrid";
+import Taco from "../../public/icons/taco.svg";
 
 const C1 = () => {
   return (
@@ -12,23 +13,18 @@ const C1 = () => {
       <LayoutWrapper>
         <ContentPadding>
           <div className={styles.content}>
-            <div className={styles.left}>
+            <div className={styles.top}>
               <div className={styles.labelContainer}>
+                <Taco className={styles.icon} width={75} height={75} />
+
                 <Label text='A lot on your plate' />
               </div>
               <h2 className={styles.heading}>
-                THE BEST STREET FOOD IN YOUR NECK OF THE WOODS
+                THE BEST MEXICAN FOOD IN YOUR NECK OF THE WOODS
               </h2>
             </div>
-            <div className={styles.right}>
-              <div className={styles.imgContainer}>
-                <Image src={Img} alt='image' fill className={styles.img} />
-              </div>
-              <div className={styles.rotatingTextContainer}>
-                <RotatingText />
-              </div>
-            </div>
           </div>
+          <ImageGrid />
         </ContentPadding>
       </LayoutWrapper>
     </div>
