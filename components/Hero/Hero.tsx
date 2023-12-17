@@ -8,7 +8,7 @@ import Button from "../Button/Button";
 
 const Hero = () => {
   return (
-    <>
+    <div className={styles.container}>
       <div className={styles.imgOverlay}></div>
       <Image
         src={Img}
@@ -36,7 +36,7 @@ const Hero = () => {
           </div>
         </ContentPadding>
       </LayoutWrapper>
-    </>
+    </div>
   );
 };
 export default Hero;

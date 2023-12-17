@@ -1,3 +1,7 @@
+.container {
+  background-color: var(--purple);
+}
+
 .imgOverlay {
   z-index: 2;
   position: absolute;
