@@ -1,9 +1,10 @@
 .container {
-  background-color: var(--black);
+  background-color: var(--purple);
 }
 
 .content {
   position: relative;
+  background-color: var(--purple);
 }
 
 .icon {
@@ -20,6 +21,7 @@
   align-items: center;
   justify-content: center;
   gap: 1rem;
+  background-color: var(--purple);
 }
 
 .heading {
@@ -31,7 +33,7 @@
 .span {
   line-height: 120%;
   letter-spacing: 5px;
-  color: var(--black);
+  color: var(--purple);
   text-shadow: 2px 2px 0 #fedf4b, -2px -2px 0 #fedf4b, 2px -2px 0 #fedf4b,
     -2px 2px 0 #fedf4b;
 }

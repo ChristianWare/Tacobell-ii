@@ -26,12 +26,10 @@
   align-items: center;
   justify-content: center;
   margin-top: 4rem;
-  /* gap: 1rem; */
 }
 
 .icon {
   position: relative;
-  /* top: -9px; */
 }
 
 .logoMobile {
@@ -45,6 +43,7 @@
 
 .email {
   z-index: 998;
+  font-weight: 900;
   color: var(--yellow);
 }
 
@@ -73,7 +72,7 @@
   font-size: 1.6rem;
   color: var(--yellow);
   position: relative;
-  font-weight: 600;
+  font-weight: 900;
   user-select: none;
   scroll-behavior: smooth;
   z-index: 998;
@@ -148,6 +147,7 @@
 @media screen and (max-width: 968px) {
   .navbar {
     justify-content: space-between;
+    align-items: flex-start;
     padding: 2rem 3rem;
   }
 

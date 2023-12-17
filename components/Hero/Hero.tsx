@@ -3,15 +3,13 @@ import ContentPadding from "../ContentPadding/ContentPadding";
 import LayoutWrapper from "../LayoutWrapper";
 import styles from "./Hero.module.css";
 import Nav from "../Nav/Nav";
-import Img from "../../public/images/bgimg.jpeg";
+import Img from "../../public/images/img1.png";
 import Button from "../Button/Button";
 
 const Hero = () => {
   return (
     <>
-      <div className={styles.imgOverlay}>
-        
-      </div>
+      <div className={styles.imgOverlay}></div>
       <Image
         src={Img}
         alt='img'
