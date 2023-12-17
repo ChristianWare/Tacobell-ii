@@ -11,11 +11,15 @@ const C2 = () => {
           <div className={styles.content}>
             <div className={styles.left}>
               <h2 className={styles.heading}>
-                Taste the most delicious Burritos before they&#39;re gone
+                We have the best Burritos ever. Hands down.
               </h2>
               <p className={styles.copy}>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam
-                corrupti ipsam consequuntur autem, blanditiis quae.
+                The heart of these burritos often boasts seasoned ground beef,
+                grilled chicken, or savory beans, providing a protein-packed
+                foundation. Complementing this is a symphony of complementary
+                elements, such as seasoned rice, melted cheese, diced tomatoes,
+                and crisp lettuce, all coming together to create a textural and
+                flavorful experience.
               </p>
               <div className={styles.btnContainer}></div>
             </div>
