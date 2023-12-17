@@ -47,19 +47,11 @@ function Nav() {
     },
     {
       text: "Menu",
-      href: "/about",
-    },
-    {
-      text: "News",
-      href: "/features",
-    },
-    {
-      text: "About",
-      href: "/contact",
+      href: "#menu",
     },
     {
       text: "Contact",
-      href: "/blog",
+      href: "#contact",
     },
   ];
 

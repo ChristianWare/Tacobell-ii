@@ -14,17 +14,17 @@ const FinalCta = () => {
           <div className={styles.content}>
             <div className={styles.bottom}>
               <div className={styles.left}>
-                <h2 className={styles.heading}>Contact Us</h2>
+                <h2 className={styles.heading}>
+                  LET&#39;S TALK. <br /> BUT YOU FIRST.
+                </h2>
                 <h3 className={styles.headingii}>
-                  Your rental property deserves more than just a listing. It
-                  deserves a spotlight.
+                  How was your recent Taco Bell experience?
                 </h3>
                 <p className={styles.topText}>
-                  Reach out to us today to see how you can begin to take
-                  advantage of the benefits of having your own direct booking
-                  website for your rental property.
+                  Want to share feedback about your recent Taco Bell visit? Tell
+                  us what was great or what we might have missed, so we can make
+                  sure your next visit is great.
                 </p>
-              
               </div>
               <div className={styles.right}>
                 <div>

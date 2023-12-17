@@ -43,7 +43,7 @@ const Footer = () => {
         <div className={styles.bottomDesktop}>
           <div className={styles.bottomLeft}>
             <p className={styles.copy}>
-              &copy; 2023 Chris Ware Agency - All Rights Reserved
+              &copy; Taco Bell - All Rights Reserved
             </p>
           </div>
         </div>
