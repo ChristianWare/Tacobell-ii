@@ -28,6 +28,7 @@ const Hero = () => {
               animates our brand and encapsulates the company’s philosophy of
               enriching the lives of our customers in every meal we make.
             </p>
+            
             <div className={styles.btnContainer}>
               <Button href='/' btnType='primary' text='Menu' />
               <Button href='/' btnType='secondary' text='Contact Us' />
