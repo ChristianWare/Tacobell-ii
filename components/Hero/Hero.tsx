@@ -19,9 +19,9 @@ const Hero = () => {
         priority
       />
       <Nav />
-      <LayoutWrapper>
-        <ContentPadding>
-          <div className={styles.content}>
+      <div className={styles.content}>
+        <LayoutWrapper>
+          <ContentPadding>
             <h1 className={styles.heading}>live mas</h1>
             <p className={styles.copy}>
               Welcome to Taco Bell&#39;s redesigned website. &#39;Live Mas&#39;
@@ -33,9 +33,9 @@ const Hero = () => {
               <Button href='/' btnType='primary' text='Menu' />
               <Button href='/' btnType='secondary' text='Contact Us' />
             </div>
-          </div>
-        </ContentPadding>
-      </LayoutWrapper>
+          </ContentPadding>
+        </LayoutWrapper>
+      </div>
     </div>
   );
 };
