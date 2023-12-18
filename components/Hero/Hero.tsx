@@ -30,8 +30,8 @@ const Hero = () => {
             </p>
 
             <div className={styles.btnContainer}>
-              <Button href='/' btnType='primary' text='Menu' />
-              <Button href='/' btnType='secondary' text='Contact Us' />
+              <Button href='#menu' btnType='primary' text='Menu' />
+              <Button href='#contact' btnType='secondary' text='Contact Us' />
             </div>
           </ContentPadding>
         </LayoutWrapper>
