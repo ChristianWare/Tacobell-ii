@@ -3,7 +3,7 @@ import ContentPadding from "../ContentPadding/ContentPadding";
 import LayoutWrapper from "../LayoutWrapper";
 import styles from "./Hero.module.css";
 import Nav from "../Nav/Nav";
-import Img from "../../public/images/img1.png";
+import Img from "../../public/images/img5.jpg";
 import Button from "../Button/Button";
 
 const Hero = () => {
