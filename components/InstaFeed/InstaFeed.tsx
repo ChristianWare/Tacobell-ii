@@ -3,7 +3,7 @@ import LayoutWrapper from "../LayoutWrapper";
 import styles from "./InstaFeed.module.css";
 import Image from "next/image";
 import Img from "../../public/images/bgimg.jpeg";
-import Img1 from "../../public/images/img1.png";
+import Img1 from "../../public/images/img5.jpg";
 import Img2 from "../../public/images/img2.png";
 import Img3 from "../../public/images/img3.png";
 import Img4 from "../../public/images/img4.png";
@@ -36,7 +36,12 @@ const InstaFeed = () => {
           <div className={styles.top}>
             <h2 className={styles.heading}>Our latest Instagram Posts</h2>
             <div className={styles.btnContainer}>
-              <Button href='/' btnType='secondary' text='Follow Us' />
+              <Button
+                href='https://www.instagram.com/tacobell/?hl=en'
+                btnType='secondary'
+                text='Follow Us'
+                target='_blank'
+              />
             </div>
           </div>
           <div className={styles.content}>
