@@ -11,9 +11,9 @@
 }
 
 .logo {
-  font-size: 4.2rem;
+  font-size: 3rem;
   color: var(--yellow);
-  font-family: var(--tuskerGrotesk);
+  font-family: var(--mechsuit);
   font-weight: 700;
   z-index: 998;
   position: absolute;
@@ -32,10 +32,11 @@
   position: relative;
 }
 
+
 .logoMobile {
   font-size: 4.2rem;
   color: var(--yellow);
-  font-family: var(--tuskerGrotesk);
+  font-family: var(--mechsuit);
   font-weight: 700;
   z-index: 998;
   display: none;
@@ -49,6 +50,7 @@
 
 .logoii {
   font-size: 3.5rem;
+  
 }
 
 .officialLogoMobile {
@@ -160,10 +162,6 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-  }
-
-  .iconii {
-    transform: rotate(180deg);
   }
 
   .overlay {

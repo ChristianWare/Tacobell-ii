@@ -13,6 +13,12 @@ const tuskerGrotesk = localFont({
   display: "swap",
 });
 
+const mechsuit = localFont({
+  src: "../public/fonts/Mechsuit.otf",
+  variable: "--mechsuit",
+  display: "swap",
+});
+
 export default function RootLayout({
   children,
 }: {
@@ -20,7 +26,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en'>
-      <body className={`${inter.className} ${tuskerGrotesk.variable}`}>
+      <body
+        className={`${inter.className} ${tuskerGrotesk.variable} ${mechsuit.variable}`}
+      >
         <ScrollIndicator />
         {children}
       </body>

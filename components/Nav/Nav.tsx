@@ -59,7 +59,8 @@ function Nav() {
     <header className={styles.header}>
       <nav className={styles.navbar}>
         <Link href='/' className={styles.logoMobile}>
-          TACO BELL <Taco className={styles.iconii} width={80} height={80} />
+          <Taco className={styles.iconii} width={80} height={80} />
+          TB{" "}
         </Link>
         <ul
           className={
@@ -89,7 +90,7 @@ function Nav() {
         </ul>
         <Link href='/' className={styles.logo}>
           <Taco className={styles.icon} width={60} height={60} />
-          TACO BELL
+          TB
         </Link>
         <Link href='/' className={styles.email}>
           hello@tacobell.com
