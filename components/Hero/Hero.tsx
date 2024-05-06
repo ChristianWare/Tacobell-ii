@@ -9,7 +9,7 @@ import Button from "../Button/Button";
 const Hero = () => {
   return (
     <div className={styles.container}>
-      <div className={styles.imgOverlay}></div>
+      {/* <div className={styles.imgOverlay}></div>
       <Image
         src={Img}
         alt='img'
@@ -17,23 +17,23 @@ const Hero = () => {
         className={styles.img}
         sizes='(max-width: 768px) 50vw, (max-width: 1200px) 100vw'
         priority
-      />
+      /> */}
       <Nav />
       <div className={styles.content}>
         <LayoutWrapper>
-          <ContentPadding>
-            <h1 className={styles.heading}>live mas</h1>
-            <p className={styles.copy}>
-              Welcome to Taco Bell&#39;s redesigned website. &#39;Live Mas&#39;
-              animates our brand and encapsulates the company’s philosophy of
-              enriching the lives of our customers in every meal we make.
-            </p>
+          <h1 className={styles.heading}>Live Mas</h1>
+          <p className={styles.copy}>
+            Welcome to Taco Bell&#39;s redesigned website. &#39;Live Mas&#39;
+            animates our brand and encapsulates the company’s philosophy of
+            enriching the lives of our customers in every meal we make.
+            {/* Nacho Fries paired with zesty Secret Aardvark&#39;s Serrabanero
+            ranch sauce. */}
+          </p>
 
-            <div className={styles.btnContainer}>
-              <Button href='#menu' btnType='primary' text='Menu' />
-              <Button href='#contact' btnType='secondary' text='Contact Us' />
-            </div>
-          </ContentPadding>
+          <div className={styles.btnContainer}>
+            <Button href='#menu' btnType='primary' text='Menu' />
+            <Button href='#contact' btnType='secondary' text='Order Now' />
+          </div>
         </LayoutWrapper>
       </div>
     </div>

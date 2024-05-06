@@ -11,15 +11,12 @@ const AboutSection = () => {
         <ContentPadding>
           <div className={styles.content}>
             <div className={styles.labelContainer}>
-            <Taco className={styles.icon} width={75} height={75} />
+              <Taco className={styles.icon} width={75} height={75} />
               <Label color='' text='About us' />
             </div>
             <h2 className={styles.heading}>
-              TACO BELL IS A{" "}
-              <span className={styles.span}>FLAVORFUL FEASTING </span>
-              ADVENTURE. INDULGE, SIP, AND ENJOY THE{" "}
-              <span className={styles.span}>TASTY DELIGHTS </span> WITH YOUR
-              COMPANIONS.
+              TACO BELL IS A FLAVORFUL FEASTING ADVENTURE. INDULGE, SIP, AND
+              ENJOY THE TASTY DELIGHTS WITH YOUR COMPANIONS.
             </h2>
             <p className={styles.copy}>
               SPAWNED BY A CREW OF TACO ENTHUSIASTS AIMING TO IGNITE A TASTEBUD

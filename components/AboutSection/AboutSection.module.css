@@ -26,16 +26,19 @@
 
 .heading {
   color: var(--yellow);
-  text-align: center;
-  font-size: 10rem;
+  font-size: 6rem;
+  font-family: var(--mechsuit);
+  width: 70%;
 }
 
 .span {
+  display: block;
   line-height: 120%;
-  letter-spacing: 5px;
+  /* letter-spacing: 5px; */
+  font-family: var(--inter) !important;
   color: var(--purple);
-  text-shadow: 2px 2px 0 #fedf4b, -2px -2px 0 #fedf4b, 2px -2px 0 #fedf4b,
-    -2px 2px 0 #fedf4b;
+  text-shadow: 1px 1px 0 #fedf4b, -1px -1px 0 #fedf4b, 1px -1px 0 #fedf4b,
+    -1px 1px 0 #fedf4b;
 }
 
 .copy {
