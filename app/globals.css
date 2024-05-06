@@ -33,9 +33,9 @@
   -webkit-tap-highlight-color: transparent;
 }
 
-div {
+/* div {
   background-color: var(--black);
-}
+} */
 
 html {
   font-size: 62.5%;
@@ -61,6 +61,7 @@ span {
   font-family: var(--tuskerGrotesk);
   color: var(--black);
   hyphens: auto;
+  word-break: break-all;
   text-transform: uppercase;
 }
 

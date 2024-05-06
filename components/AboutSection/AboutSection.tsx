@@ -14,7 +14,7 @@ const AboutSection = () => {
               <Taco className={styles.icon} width={75} height={75} />
               <Label color='' text='About us' />
             </div>
-            <h2 className={styles.heading}>
+            <h2 className={styles.heading} lang='en'>
               TACO BELL IS A FLAVORFUL FEASTING ADVENTURE. INDULGE, SIP, AND
               ENJOY THE TASTY DELIGHTS WITH YOUR COMPANIONS.
             </h2>

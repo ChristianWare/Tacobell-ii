@@ -1,3 +1,7 @@
+.bgColor {
+  background-color: var(--black);
+}
+
 .heading {
   color: var(--yellow);
   text-align: center;
