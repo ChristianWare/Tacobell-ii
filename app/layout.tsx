@@ -2,7 +2,6 @@ import localFont from "next/font/local";
 
 import { Inter, Staatliches } from "next/font/google";
 import "./globals.css";
-import Nav from "@/components/Nav/Nav";
 import ScrollIndicator from "@/components/ScrollIndicator/ScrollIndicator";
 
 const inter = Inter({ subsets: ["latin"] });

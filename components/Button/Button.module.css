@@ -7,7 +7,7 @@
   position: relative;
   z-index: 2;
   display: block;
-  padding: 1rem 6rem;
+  padding: .5rem 6rem;
   transition: all 0.2s ease-in;
   white-space: nowrap;
 }
@@ -23,8 +23,15 @@
   border: 0;
   background-color: transparent;
   transition: all 0.2s ease-in;
+  border-radius: 50px; /* Add border-radius */
 }
 
+.btnInner {
+  overflow: hidden;
+  position: relative;
+  margin: 0;
+  border-radius: 50px; /* Add border-radius to inner element */
+}
 .primary:hover {
   color: var(--yellow);
   transition: all 0.2s ease-in;
@@ -51,30 +58,24 @@
 .secondary::before {
   top: 0;
   border-bottom: 0;
+  border-top-left-radius: 50px; /* Rounded top-left */
+  border-top-right-radius: 50px; /* Rounded top-right */
 }
 
 .primary::after,
 .secondary::after {
   bottom: 0;
   border-top: 0;
+  border-bottom-left-radius: 50px; /* Rounded bottom-left */
+  border-bottom-right-radius: 50px; /* Rounded bottom-right */
 }
 
-.btnInner {
-  overflow: hidden;
-  position: relative;
-  margin: 0;
-}
-
-.primary .btnInner {
+.primary .btnInner,
+.secondary .btnInner {
   border: 1px solid var(--yellow);
   background-color: transparent;
   margin-right: -0.6rem;
-}
-
-.secondary .btnInner {
-  border: 1px solid var(--yellow);
-  background-color: var(--white);
-  margin-right: -0.6rem;
+  border-radius: 50px; /* Add border-radius */
 }
 
 .btnInner::before {
@@ -114,7 +115,7 @@
 }
 
 .secondary .btnContent {
-  color: var(--black);
+  color: var(--yellow);
 }
 
 .btnContent:hover {
@@ -132,8 +133,8 @@
 .btnContent::after {
   content: "";
   position: absolute;
-  right: 5px;
-  bottom: 5px;
+  right: 20px;
+  bottom: 20px;
   display: block;
   width: 0.6rem;
   height: 0.6rem;
