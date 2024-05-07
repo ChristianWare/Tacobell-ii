@@ -13,7 +13,7 @@ export default function Home() {
     <div>
       <Hero />
       <PostHero />
-      {/* <AboutSection /> */}
+      <AboutSection />
       {/* <C1 /> */}
       {/* <Newest /> */}
       {/* <C2 /> */}

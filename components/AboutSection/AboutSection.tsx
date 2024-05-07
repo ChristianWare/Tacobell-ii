@@ -1,31 +1,75 @@
-import ContentPadding from "../ContentPadding/ContentPadding";
 import Label from "../Label/Label";
 import LayoutWrapper from "../LayoutWrapper";
 import styles from "./AboutSection.module.css";
 import Taco from "../../public/icons/taco.svg";
+import Image from "next/image";
+import Img1 from "../../public/images/img5.jpg";
+import Button from "../Button/Button";
 
 const AboutSection = () => {
   return (
     <div className={styles.container}>
       <LayoutWrapper>
-        <ContentPadding>
-          <div className={styles.content}>
-            <div className={styles.labelContainer}>
-              <Taco className={styles.icon} width={75} height={75} />
-              <Label color='' text='About us' />
+        <div className={styles.content}>
+          <div className={styles.left}>
+            {/* <Label text='About Us' /> */}
+            <h2 className={styles.heading}>About us</h2>
+            <div className={styles.right}>
+              <p className={styles.copy}>
+                Welcome to Taco Bell, where tradition meets innovation in every
+                dish we serve. Founded in 1948, our mission has been to provide
+                a unique dining experience by blending classic culinary
+                techniques with contemporary flavors. Our passionate team is
+                dedicated to using only the freshest ingredients to craft
+                mouthwatering meals that cater to all palates. Join us for a
+                meal, and become part of our family that celebrates great food
+                and memorable moments.
+              </p>
+              <div className={styles.iconTextContainer}>
+                <div className={styles.itextLeft}>
+                  <Taco width={40} height={40} className={styles.icon} />
+                </div>
+                <div className={styles.itexRight}>
+                  <p className={styles.copyii}>
+                    Best tacos in the game
+                  </p>
+                </div>
+              </div>
+              <div className={styles.iconTextContainer}>
+                <div className={styles.itextLeft}>
+                  <Taco width={40} height={40} className={styles.icon} />
+                </div>
+                <div className={styles.itexRight}>
+                  <p className={styles.copyii}>
+                    Most items on our menu
+                  </p>
+                </div>
+              </div>
+              <div className={styles.iconTextContainer}>
+                <div className={styles.itextLeft}>
+                  <Taco width={40} height={40} className={styles.icon} />
+                </div>
+                <div className={styles.itexRight}>
+                  <p className={styles.copyii}>
+                    Eat great even late
+                  </p>
+                </div>
+              </div>
+              <div className={styles.btnContainer}>
+                <Button
+                  href='/about'
+                  text='More about us'
+                  btnType='secondary'
+                />
+              </div>
             </div>
-            <h2 className={styles.heading} lang='en'>
-              TACO BELL IS A FLAVORFUL FEASTING ADVENTURE. INDULGE, SIP, AND
-              ENJOY THE TASTY DELIGHTS WITH YOUR COMPANIONS.
-            </h2>
-            <p className={styles.copy}>
-              SPAWNED BY A CREW OF TACO ENTHUSIASTS AIMING TO IGNITE A TASTEBUD
-              REVOLUTION IN Downey, California , TACO BELL AROSE. WE EMBRACE
-              FLAVOR, CHERISH REFRESHMENTS, AND THRIVE ON CRAFTING MEMORABLE
-              MOMENTS OF TACO DELIGHT.
-            </p>
           </div>
-        </ContentPadding>
+          <div className={styles.right}>
+            <div className={styles.imgContainer}>
+              <Image src={Img1} alt='img' fill className={styles.img} />
+            </div>
+          </div>
+        </div>
       </LayoutWrapper>
     </div>
   );

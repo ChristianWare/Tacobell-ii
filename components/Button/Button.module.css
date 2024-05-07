@@ -1,151 +1,81 @@
-.btnContent {
-  font-size: 2.5rem;
-  font-weight: 700;
-  letter-spacing: 1px;
+.container {
+  position: relative;
+  z-index: 1;
+}
+
+.btn {
   text-align: center;
-  text-transform: uppercase;
-  position: relative;
-  z-index: 2;
-  display: block;
-  padding: .5rem 6rem;
-  transition: all 0.2s ease-in;
+  font-size: 2.3rem;
+  font-family: var(--staatliches);
   white-space: nowrap;
-}
-
-.primary,
-.secondary {
+  border-radius: 50px;
+  user-select: none;
+  transition: all 0.1s ease-in;
+  display: inline-block;
+  padding: 8px 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
   position: relative;
-  display: block;
-  margin-bottom: 3rem;
-  padding: 0.7rem;
+  z-index: 1;
   width: 100%;
-  cursor: pointer;
-  border: 0;
-  background-color: transparent;
-  transition: all 0.2s ease-in;
-  border-radius: 50px; /* Add border-radius */
+  line-height: 1;
 }
 
-.btnInner {
-  overflow: hidden;
-  position: relative;
-  margin: 0;
-  border-radius: 50px; /* Add border-radius to inner element */
+.primary {
+  color: var(--black);
+  background-color: var(--yellow);
+  border: 2px solid var(--yellow);
 }
+
 .primary:hover {
+  background-color: transparent;
   color: var(--yellow);
-  transition: all 0.2s ease-in;
+}
+
+.primaryii {
+  color: var(--green);
+  background-color: transparent;
+  border: 2px solid var(--green);
+}
+
+.secondary {
+  color: var(--tan);
+  background-color: var(--purple);
+  border: 2px solid var(--purple);
 }
 
 .secondary:hover {
-  color: var(--yellow);
-}
-
-.primary::before,
-.primary::after,
-.secondary::before,
-.secondary::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  width: 100%;
-  height: calc(50% - 0.4rem);
-  border: 3px solid var(--yellow);
   background-color: transparent;
+  color: var(--purple);
 }
 
-.primary::before,
-.secondary::before {
-  top: 0;
-  border-bottom: 0;
-  border-top-left-radius: 50px; /* Rounded top-left */
-  border-top-right-radius: 50px; /* Rounded top-right */
+.tertiary {
+  color: var(--black);
+  background-color: var(--green);
+  border: 1px solid var(--border2);
 }
 
-.primary::after,
-.secondary::after {
-  bottom: 0;
-  border-top: 0;
-  border-bottom-left-radius: 50px; /* Rounded bottom-left */
-  border-bottom-right-radius: 50px; /* Rounded bottom-right */
-}
-
-.primary .btnInner,
-.secondary .btnInner {
-  border: 1px solid var(--yellow);
+.tertiaryii {
+  color: var(--black);
   background-color: transparent;
-  margin-right: -0.6rem;
-  border-radius: 50px; /* Add border-radius */
+  border: 1px solid var(--black);
 }
 
-.btnInner::before {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-
-.btnSlide {
-  content: "";
-  position: absolute;
-  z-index: 1;
-  top: 0;
-  left: -5%;
-  width: 110%;
-  height: 100%;
-  transform: skew(-10deg) translateX(-100%);
-  background-color: var(--yellow);
-  transition: all 0.2s ease-in;
-}
-
-.primary .btnSlide,
-.secondary .btnSlide {
-  background-color: var(--yellow);
-}
-
-.primary .btnContent {
-  color: var(--yellow);
-}
-
-.primary:hover .btnContent {
+.navBtn {
+  padding: 5px 25px;
+  font-weight: 600;
   color: var(--black);
+  background-color: var(--green);
+  border: 1px solid var(--green);
+  font-size: 2.1rem;
 }
 
-.secondary .btnContent {
-  color: var(--yellow);
-}
-
-.btnContent:hover {
+.navBtnii {
+  padding: 5px 25px;
+  font-weight: 600;
   color: var(--black);
-}
-
-.primary:hover .btnSlide {
-  transform: skew(-10deg) translateX(0);
-}
-
-.secondary:hover .btnSlide {
-  transform: skew(-10deg) translateX(0);
-}
-
-.btnContent::after {
-  content: "";
-  position: absolute;
-  right: 20px;
-  bottom: 20px;
-  display: block;
-  width: 0.6rem;
-  height: 0.6rem;
-  background-color: var(--yellow);
-  transition: all 0.2s ease-in;
-}
-
-.primary:hover .btnContent::after {
-  background-color: var(--black);
-}
-
-.secondary:hover .btnContent::after {
-  background-color: var(--black);
+  font-size: 1.4rem;
+  border: 1px solid var(--border2);
 }

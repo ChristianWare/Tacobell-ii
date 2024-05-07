@@ -4,7 +4,7 @@ import Button from "../Button/Button";
 import Img from "../../public/images/img5.jpg";
 import Nav from "../Nav/Nav";
 import Image from "next/image";
-import Taco from "../../public/icons/taco.svg";
+import RotatingText from "../RotatingText/RotatingText";
 
 const Hero = () => {
   return (
@@ -22,7 +22,6 @@ const Hero = () => {
       <LayoutWrapper>
         <div className={styles.content}>
           <div className={styles.left}>
-            <Taco className={styles.icon} width={60} height={60} />
             <h1 className={styles.heading}>
               Discover Bold Flavors: Experience Taco Bell&apos;s New Menu!{" "}
             </h1>
@@ -36,7 +35,7 @@ const Hero = () => {
             </div>
           </div>
           <div className={styles.right}>
-            {/* <RotatingText text='Chris Ware Agency • Chris Ware Agency • Chris Ware Agency • Chris Ware Agency • Chris Ware Agency • Chris Ware Agency • Chris Ware Agency • Chris Ware Agency' /> */}
+            <RotatingText text='Taco Bell • Live Mas • Taco Bell • Live Mas • Taco Bell • ' />
           </div>
         </div>
       </LayoutWrapper>
