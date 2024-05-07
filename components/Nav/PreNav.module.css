@@ -1,0 +1,11 @@
+.preNav {
+  background-color: var(--green);
+  padding: 0.1rem;
+  font-weight: bold;
+  font-size: 1.3rem;
+  color: var(--black);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 2px solid var(--border);
+}

@@ -4,10 +4,6 @@ import styles from "./Nav.module.css";
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import Taco from "../../public/icons/taco.svg";
-import Insta from "../../public/icons/instagram.svg";
-import LinkedIn from "../../public/icons/linkedin.svg";
-import Facebook from "../../public/icons/facebook.svg";
 
 function Nav() {
   const [isOpen, setIsOpen] = useState(false);
@@ -45,26 +41,31 @@ function Nav() {
 
   const navItems = [
     {
-      text: "Home",
-      href: "/",
+      text: "About",
+      href: "/about",
     },
     {
-      text: "Menu",
-      href: "#menu",
+      text: "Features",
+      href: "/features",
     },
     {
       text: "Contact",
-      href: "#contact",
+      href: "/contact",
+    },
+    {
+      text: "Blog",
+      href: "/blog",
     },
   ];
 
   return (
     <header className={styles.header}>
       <nav className={styles.navbar}>
-        <Link href='/' className={styles.logoMobile}>
-          <Taco className={styles.iconii} width={80} height={80} />
-          Taco Bell{" "}
-        </Link>
+        <div className={styles.logo}>
+          <Link href='/' className={styles.logo}>
+            Taco Bell
+          </Link>
+        </div>
         <ul
           className={
             isOpen === false
@@ -72,6 +73,18 @@ function Nav() {
               : `${styles.navMenu} ${styles.active}`
           }
         >
+          <li>
+            <Link
+              href='/'
+              className={
+                pathname === "/"
+                  ? `${styles.activeLink}  ${styles.navItem}`
+                  : styles.navItem
+              }
+            >
+              Home
+            </Link>
+          </li>
           {navItems.map((navItem, index) => (
             <li
               key={index}
@@ -81,7 +94,7 @@ function Nav() {
               <Link
                 href={navItem.href}
                 className={
-                  pathname === navItem.href
+                  pathname.includes(navItem.href)
                     ? `${styles.activeLink}  ${styles.navItem}`
                     : styles.navItem
                 }
@@ -90,37 +103,8 @@ function Nav() {
               </Link>
             </li>
           ))}
+          
         </ul>
-        <Link href='/' className={styles.logo}>
-          <Taco className={styles.icon} width={60} height={60} />
-          Taco Bell
-        </Link>
-        <div className={styles.leftBottom}>
-          <Link
-            href='https://www.linkedin.com/'
-            target='_blank'
-            aria-label='LinkedIn'
-            className={styles.detail}
-          >
-            <LinkedIn className={styles.icon} width={12} height={12} />
-          </Link>
-          <Link
-            href='https://www.facebook.com/'
-            target='_blank'
-            aria-label='Facebook'
-            className={styles.detail}
-          >
-            <Facebook className={styles.icon} width={12} height={12} />
-          </Link>
-          <Link
-            href='https://instagram.com/'
-            target='_blank'
-            aria-label='Instagram'
-            className={styles.detail}
-          >
-            <Insta className={styles.icon} width={12} height={12} />
-          </Link>
-        </div>
         {isOpen && (
           <div
             className={`${styles.overlay} ${

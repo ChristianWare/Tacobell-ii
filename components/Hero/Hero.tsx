@@ -1,15 +1,15 @@
-import Image from "next/image";
-import ContentPadding from "../ContentPadding/ContentPadding";
-import LayoutWrapper from "../LayoutWrapper";
 import styles from "./Hero.module.css";
-import Nav from "../Nav/Nav";
-import Img from "../../public/images/img5.jpg";
+import LayoutWrapper from "../LayoutWrapper";
 import Button from "../Button/Button";
+import Img from "../../public/images/img5.jpg";
+import Image from "next/image";
+import Nav from "../Nav/Nav";
+import Taco from "../../public/icons/taco.svg";
 
 const Hero = () => {
   return (
     <div className={styles.container}>
-      {/* <div className={styles.imgOverlay}></div>
+      <div className={styles.imgOverlay}></div>
       <Image
         src={Img}
         alt='img'
@@ -17,25 +17,29 @@ const Hero = () => {
         className={styles.img}
         sizes='(max-width: 768px) 50vw, (max-width: 1200px) 100vw'
         priority
-      /> */}
+      />
       <Nav />
-      <div className={styles.content}>
-        <LayoutWrapper>
-          <h1 className={styles.heading}>Live Mas</h1>
-          <p className={styles.copy}>
-            Welcome to Taco Bell&#39;s redesigned website. &#39;Live Mas&#39;
-            animates our brand and encapsulates the company’s philosophy of
-            enriching the lives of our customers in every meal we make.
-            {/* Nacho Fries paired with zesty Secret Aardvark&#39;s Serrabanero
-            ranch sauce. */}
-          </p>
-
-          <div className={styles.btnContainer}>
-            <Button href='#menu' btnType='primary' text='Menu' />
-            <Button href='#contact' btnType='secondary' text='Order Now' />
+      <LayoutWrapper>
+        <div className={styles.content}>
+          <div className={styles.left}>
+            <Taco className={styles.icon} width={60} height={60} />
+            <h1 className={styles.heading}>
+              Discover Bold Flavors: Experience Taco Bell&apos;s New Menu!{" "}
+            </h1>
+            <p className={styles.copy}>
+              Tired of relying solely on platforms like Airbnb or VRBO? We
+              empower property owners to take control of their bookings with a
+              custom website to showcase thier unique offerings.
+            </p>
+            <div className={styles.btnContainer}>
+              <Button text='Contact us' href='/contact' btnType='secondary' />
+            </div>
           </div>
-        </LayoutWrapper>
-      </div>
+          <div className={styles.right}>
+            {/* <RotatingText text='Chris Ware Agency • Chris Ware Agency • Chris Ware Agency • Chris Ware Agency • Chris Ware Agency • Chris Ware Agency • Chris Ware Agency • Chris Ware Agency' /> */}
+          </div>
+        </div>
+      </LayoutWrapper>
     </div>
   );
 };

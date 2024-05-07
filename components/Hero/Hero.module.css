@@ -1,16 +1,14 @@
 .container {
-  background-color: var(--purple);
+  position: relative;
   height: 100vh;
 }
 
 .imgOverlay {
   z-index: 2;
   position: absolute;
-  top: 0;
-  left: 0;
   height: 100%;
   width: 100%;
-  background: linear-gradient(rgba(10, 7, 27, 0.9), rgba(10, 7, 27, 0.6));
+  background: linear-gradient(rgba(119, 67, 219, 1), rgba(10, 7, 27, 0.7));
 }
 
 .img {
@@ -19,66 +17,154 @@
 
 .content {
   display: flex;
+  gap: 2rem;
+}
+
+.left {
+  flex: 2;
+  z-index: 3;
+  display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
-  position: relative;
-  height: 100%;
-  background-color: transparent;
+  margin-top: -3rem;
+}
+
+.right {
+  flex: 1;
+  z-index: 3;
+  margin-top: 15rem;
+}
+
+.icon {
+  margin-bottom: 1rem;
+  color: var(--yellow);
 }
 
 .heading {
   z-index: 3;
-  text-align: center;
   color: var(--yellow);
   margin-bottom: 3rem;
 }
 
-.copy {
+.heading2 {
   z-index: 3;
   color: var(--yellow);
-  width: 70%;
+  font-family: var(--staatliches);
+  font-size: 10rem;
+}
+
+.copy {
+  z-index: 3;
+  font-size: 2rem;
   font-weight: 500;
-  font-size: 1.7rem;
-  text-align: center;
-  text-transform: uppercase;
-  margin-left: auto;
-  margin-right: auto;
+  color: var(--yellow);
+  width: 90%;
+  margin-bottom: 3rem;
 }
 
 .btnContainer {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  width: 50%;
+}
+
+.leftBottom {
   z-index: 3;
-  margin-top: 3rem;
+  display: flex;
+  align-items: center;
+  width: fit-content;
+}
+
+.lb1 {
+  padding: 2rem;
+  padding-left: 0rem;
+  border-right: 2px solid var(--border2);
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.lb2 {
+  padding: 2rem;
+  font-size: 0;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.b2 {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 3rem;
-  width: 70%;
-  margin-left: auto;
-  margin-right: auto;
-  background-color: transparent;
+  width: 100%;
+}
+
+@media screen and (max-width: 1200px) {
+  .container {
+    height: 100%;
+  }
 }
 
 @media screen and (max-width: 968px) {
+  .content {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 0rem;
+  }
+
+  .left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .heading {
+    text-align: center;
+  }
+
   .copy {
+    text-align: center;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .btnContainer {
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .left {
+    align-items: flex-start;
+  }
+
+  .heading,
+  .copy {
+    text-align: left;
     width: 100%;
+  }
+
+  .btnContainer,
+  .leftBottom {
+    justify-content: flex-start;
+    margin-left: 0;
+    margin-right: 0;
   }
 }
 
 @media screen and (max-width: 568px) {
-  .content {
-    height: 100%;
-    margin-top: 0rem;
-  }
-
-  .copy {
-    margin-top: 2rem;
+  .heading {
+    font-size: 7rem;
   }
 
   .btnContainer {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     width: 100%;
-    grid-gap: 0;
   }
 }
