@@ -19,7 +19,7 @@
   font-family: var(--staatliches);
   line-height: 100%;
   padding: 1rem 3rem;
-  border: 1px solid var(--purple);
+  border: 1px solid var(--border);
   border-radius: 10px;
   cursor: pointer;
   transition: all 0.1s ease-in;
