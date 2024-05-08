@@ -7,11 +7,12 @@ import Taco from "../../public/icons/taco.svg";
 
 interface RotatingTextProps {
   text: string;
+  color?: string;
   showArrow?: boolean;
   showEmoji?: boolean;
 }
 
-const RotatingText: FC<RotatingTextProps> = ({ text }) => {
+const RotatingText: FC<RotatingTextProps> = ({ text, color = "" }) => {
   const [rotationAngle, setRotationAngle] = useState(0);
 
   useEffect(() => {
@@ -48,13 +49,20 @@ const RotatingText: FC<RotatingTextProps> = ({ text }) => {
           />
         </defs>
         <text font-size='12.2'>
-          <textPath className={styles.svg} xlinkHref='#circle'>
+          <textPath
+            className={`${styles.svg} ${styles[color]}`}
+            xlinkHref='#circle'
+          >
             {text}
           </textPath>
         </text>
       </svg>
       <div className={styles.iconContainer}>
-        <Taco className={styles.icon} width={100} height={100} />
+        <Taco
+          className={`${styles.icon} ${styles[color]}`}
+          width={100}
+          height={100}
+        />
       </div>
     </div>
   );

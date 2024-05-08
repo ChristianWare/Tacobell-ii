@@ -1,0 +1,184 @@
+.container {
+  background-color: var(--yellow);
+}
+
+.content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 10rem;
+  height: 100%;
+}
+
+.left,
+.right {
+  flex: 1;
+  width: 100%;
+}
+
+.left,
+.card {
+  align-self: flex-start;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 90px;
+}
+
+.left::after {
+  position: absolute;
+  content: "";
+  top: 250px;
+  left: 0;
+  width: 100px;
+  height: 100px;
+  background-color: var(--purple);
+  border-radius: 10px;
+  border-top-right-radius: 200px;
+  z-index: -1;
+  filter: blur(10rem);
+}
+
+.heading {
+  border-bottom: 1px solid var(--border3);
+  margin-bottom: 3rem;
+  font-size: 7rem;
+  line-height: 100%;
+  text-transform: uppercase;
+  color: var(--black);
+  font-size: 8.5rem;
+  font-family: var(--staatliches);
+}
+
+.topText {
+  color: var(--black);
+  font-weight: 500;
+  margin-top: 3rem;
+  font-size: 1.6rem;
+}
+
+.rtContainer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.card {
+  padding: 3rem;
+  z-index: 999;
+  background-color: var(--black2);
+  border-radius: 10px;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 3rem;
+}
+
+.boxRight {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+
+.number {
+  padding: 1rem;
+  font-size: 2rem;
+  color: var(--yellow);
+  display: block;
+  line-height: 100%;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--yellow);
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+}
+
+.processName {
+  color: var(--tan);
+  font-size: 2.6rem;
+}
+
+.copy {
+  color: var(--tan);
+  opacity: 0.7;
+  font-weight: 500;
+}
+
+@media screen and (max-width: 968px) {
+  .content {
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .topText,
+  .heading {
+    width: 100%;
+    text-align: center;
+    margin-top: 0rem;
+  }
+
+  .left {
+    position: relative;
+    align-self: normal;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .left::after {
+    top: -250px;
+    left: 40%;
+    width: 200px;
+    height: 200px;
+  }
+
+  .rtContainer {
+    margin-top: 3rem;
+    margin-bottom: -8rem;
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .heading {
+    font-size: 6rem;
+  }
+
+  .topText {
+    width: 100%;
+    text-align: center;
+  }
+
+  .right {
+    gap: 2rem;
+  }
+
+  .box {
+    flex-direction: column;
+  }
+
+  .card {
+    border-radius: 10px;
+  }
+
+  .boxLeft {
+    margin-left: 0rem;
+  }
+}

@@ -34,6 +34,16 @@
   transform: rotate(45deg);
 }
 
+.tan {
+  color: var(--tan);
+  fill: var(--tan);
+}
+
+.purple {
+  color: var(--purple);
+  fill: var(--purple);
+}
+
 @media screen and (max-width: 568px) {
   .container {
     width: 300px;

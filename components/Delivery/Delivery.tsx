@@ -1,4 +1,3 @@
-import ContentPadding from "../ContentPadding/ContentPadding";
 import LayoutWrapper from "../LayoutWrapper";
 import styles from "./Delivery.module.css";
 import DoorDash from "../../public/icons/doordash.svg";
@@ -10,7 +9,6 @@ const Delivery = () => {
   return (
     <div className={styles.container}>
       <LayoutWrapper>
-        <ContentPadding>
           <div className={styles.top}>
             <h2 className={styles.heading}>
               Order from your favorite app today!
@@ -22,7 +20,6 @@ const Delivery = () => {
             <Grubhub className={styles.icon} width={75} height={75} />
             <Deliveroo className={styles.icon} width={75} height={75} />
           </div>
-        </ContentPadding>
       </LayoutWrapper>
     </div>
   );

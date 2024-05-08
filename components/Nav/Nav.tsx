@@ -45,17 +45,16 @@ function Nav() {
       href: "/about",
     },
     {
-      text: "Features",
+      text: "Menu",
       href: "/features",
     },
     {
       text: "Contact",
       href: "/contact",
     },
-    {
-      text: "Blog",
-      href: "/blog",
-    },
+    // {
+    //   text: "Cart",
+    // },
   ];
 
   return (
@@ -103,7 +102,9 @@ function Nav() {
               </Link>
             </li>
           ))}
-          
+          <li className={styles.navItem}>
+            Cart <span>0</span>
+          </li>
         </ul>
         {isOpen && (
           <div

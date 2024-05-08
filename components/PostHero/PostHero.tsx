@@ -4,6 +4,8 @@ import Breakfast from "../../public/icons/breakfast.svg";
 import Fries from "../../public/icons/fries.svg";
 import Drinks from "../../public/icons/drinks.svg";
 import Dessert from "../../public/icons/dessert.svg";
+import C1 from "../C1/C1";
+import ImageGrid from "../ImageGrid/ImageGrid";
 
 const preHero = [
   {
@@ -35,9 +37,9 @@ const PostHero = () => {
         <div className={styles.contentTop}>
           <h2 className={styles.heading}>Browse our menu</h2>
           <p className={styles.copy}>
-            Whether you’re craving something savory for breakfast, a
-            satisfying main dish, a refreshing beverage, or a sweet dessert, our
-            menu has something to excite everyone’s taste buds.
+            Whether you’re craving something savory for breakfast, a satisfying
+            main dish, a refreshing beverage, or a sweet dessert, our menu has
+            something to excite everyone’s taste buds.
           </p>
         </div>
         <div className={styles.contentBottom}>
@@ -49,6 +51,8 @@ const PostHero = () => {
             </div>
           ))}
         </div>
+        <h2 className={styles.heading}>Most Popular</h2>
+        <ImageGrid />
       </LayoutWrapper>
     </div>
   );

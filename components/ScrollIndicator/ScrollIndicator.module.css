@@ -13,6 +13,7 @@
   height: 4px;
   background-color: var(--yellow);
   transition: none;
+  border-bottom: 1px solid var(--purple);
 }
 
 @media screen and (max-width: 480px) {

@@ -7,6 +7,8 @@ import Delivery from "@/components/Delivery/Delivery";
 import InstaFeed from "@/components/InstaFeed/InstaFeed";
 import FinalCta from "@/components/FinalCta/FinalCta";
 import PostHero from "@/components/PostHero/PostHero";
+import HowItWorks from "@/components/HowItWorks/HowItWorks";
+import FinalCTA2 from "@/components/FinalCTA2/FinalCTA2";
 
 export default function Home() {
   return (
@@ -14,12 +16,11 @@ export default function Home() {
       <Hero />
       <PostHero />
       <AboutSection />
-      {/* <C1 /> */}
-      {/* <Newest /> */}
-      {/* <C2 /> */}
-      {/* <Delivery /> */}
-      {/* <InstaFeed /> */}
-      {/* <FinalCta /> */}
+      <Newest />
+      <HowItWorks />
+      <Delivery />
+      <FinalCTA2 />
+      <FinalCta />
     </div>
   );
 }

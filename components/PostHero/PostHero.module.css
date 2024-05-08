@@ -22,7 +22,7 @@
   line-height: 120%;
   font-weight: 500;
   font-family: var(--staatliches);
-  color: var(--black);
+  color: var(--purple);
   text-align: center;
   width: 100%;
 }
@@ -37,6 +37,7 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 2rem;
+  margin-bottom: 10rem;
 }
 
 .box {
@@ -51,6 +52,7 @@
 
 .icon {
   margin-bottom: 1rem;
+  color: var(--purple);
 }
 
 .value {

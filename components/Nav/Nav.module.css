@@ -59,6 +59,23 @@
   scroll-behavior: smooth;
   z-index: 998;
   font-family: var(--staatliches);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.navItem span {
+  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 100%;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: var(--yellow);
+  color: var(--black);
 }
 
 .activeLink {
@@ -89,7 +106,7 @@
   height: 3px;
   margin: 5px auto;
   border-radius: 15px;
-  background-color: var(--green);
+  background-color: var(--yellow);
   transition: all 0.3s ease-in-out;
 }
 
