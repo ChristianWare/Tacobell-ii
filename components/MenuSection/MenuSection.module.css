@@ -1,0 +1,37 @@
+.container {
+  background-color: var(--tan);
+  padding-top: 5rem;
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 3rem;
+  margin-bottom: 5rem;
+}
+
+.categoryName {
+  color: var(--black);
+  background-color: var(--white);
+  font-size: 3rem;
+  font-family: var(--staatliches);
+  line-height: 100%;
+  padding: 1rem 3rem;
+  border: 1px solid var(--purple);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.1s ease-in;
+}
+
+.categoryName:hover {
+  background-color: var(--purple);
+  color: var(--white);
+}
+
+.bottom {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 3rem;
+}

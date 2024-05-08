@@ -6,7 +6,6 @@ import { simplifiedProduct } from "@/app/interface";
 import Link from "next/link";
 import Image from "next/image";
 import LayoutWrapper from "../LayoutWrapper";
-import ContentPadding from "../ContentPadding/ContentPadding";
 import Nacho from "../../public/icons/nachos.svg";
 import Button from "../Button/Button";
 

@@ -27,6 +27,8 @@ async function getData(slug: string) {
   return data;
 }
 
+export const revalidate = 10;
+
 export default async function ProductPage({
   params,
 }: {

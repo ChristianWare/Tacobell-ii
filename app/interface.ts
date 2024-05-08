@@ -17,3 +17,8 @@ export interface fullProduct {
   name: string;
   description: string;
 }
+
+export interface categoryData {
+  _id: string;
+  name: string;
+}
