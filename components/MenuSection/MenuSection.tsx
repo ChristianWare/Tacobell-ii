@@ -41,7 +41,11 @@ const MenuSection = ({ data, categoryData }: Props) => {
           </div>
           <div className={styles.bottom}>
             {filteredData.map((product) => (
-              <PreviewCard data={product} key={product._id} />
+              <PreviewCard
+                data={product}
+                key={product._id}
+                btnType='secondaryii'
+              />
             ))}
           </div>
         </div>

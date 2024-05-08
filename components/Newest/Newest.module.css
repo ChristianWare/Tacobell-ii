@@ -8,6 +8,8 @@
   align-items: center;
   justify-content: center;
   gap: 1rem;
+  /* border-bottom: 1px solid var(--yellow);
+  padding-bottom: 1rem; */
 }
 
 .heading {
@@ -30,10 +32,9 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 3rem;
-  margin-top: 5rem;
 }
 
-.card:nth-child(even) {
+.productCardContainer:nth-child(even) {
   margin-top: 7rem;
 }
 

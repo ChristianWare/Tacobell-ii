@@ -7,12 +7,19 @@ import { useState, useEffect } from "react";
 
 interface Props {
   data: simplifiedProduct;
+  borderColor?: string;
+  textColor?: string;
+  btnType: string;
 }
 
-const PreviewCard = ({ data }: Props) => {
-    
+const PreviewCard = ({
+  data,
+  borderColor = "",
+  textColor = "",
+  btnType = "",
+}: Props) => {
   return (
-    <div className={styles.container}>
+    <div className={`${styles.container} ${styles[borderColor]}`}>
       <Link href={`/product/${data.slug}`} className={styles.slug}>
         <div className={styles.imgContainer}>
           <Image src={data.imageUrl} alt='image' fill className={styles.img} />
@@ -23,7 +30,9 @@ const PreviewCard = ({ data }: Props) => {
       </Link>
       <div className={styles.details}>
         <Link href={`/data/${data.slug}`}>
-          <h3 className={styles.productName}>{data.name}</h3>
+          <h3 className={`${styles.productName} ${styles[textColor]}`}>
+            {data.name}
+          </h3>
         </Link>
         <p className={styles.description}>{data.price}</p>
       </div>
@@ -31,7 +40,7 @@ const PreviewCard = ({ data }: Props) => {
         <Button
           href={`/product/${data.slug}`}
           text='More Details'
-          btnType='secondaryii'
+          btnType={btnType}
         />
       </div>
     </div>

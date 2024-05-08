@@ -5,6 +5,10 @@
   display: grid;
 }
 
+.yellowBorder {
+  border: 2px solid var(--yellow);
+}
+
 .imgContainer {
   position: relative;
   width: 100%;
@@ -38,6 +42,10 @@
   margin-top: 1rem;
   z-index: 3;
   font-size: 3rem;
+}
+
+.yellowText {
+  color: var(--yellow);
 }
 
 .productName:hover {

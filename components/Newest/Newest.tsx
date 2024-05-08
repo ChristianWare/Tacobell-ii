@@ -8,6 +8,7 @@ import Image from "next/image";
 import LayoutWrapper from "../LayoutWrapper";
 import Nacho from "../../public/icons/nachos.svg";
 import Button from "../Button/Button";
+import PreviewCard from "../PreviewCard/PreviewCard";
 
 async function getData() {
   const query = `*[_type == "product"][0...4] | order(_createdAt desc) {
@@ -35,41 +36,29 @@ export default async function Newest() {
         <div className={styles.top}>
           <Nacho className={styles.icon} width={200} height={200} />
           <h2 className={styles.heading}>
-            Lets Taco&apos; bout Newest our Items
+            Lets Taco&apos; bout our Newest Items
           </h2>
-          <div className={styles.copy}>
+          <p className={styles.copy}>
             Indulge in a diverse array of innovative flavors at Taco Bell, where
             our latest menu offerings feature exciting creations like loaded
             MexiFries, crave-worthy Crunchwrap Sliders, and bold Korean BBQ
             Tacos.
-          </div>
+          </p>
         </div>
         <div className={styles.bottom}>
           {data.map((product) => (
-            <div key={product._id} className={styles.card}>
-              <Link href={`/product/${product.slug}`} className={styles.slug}>
-                <div className={styles.imgContainer}>
-                  <Image
-                    src={product.imageUrl}
-                    alt='image'
-                    fill
-                    className={styles.img}
-                  />
-                  <p className={styles.price}>${product.price}</p>
-                </div>
-              </Link>
-              <div className={styles.details}>
-                <Link href={`/product/${product.slug}`}>
-                  <h3 className={styles.productName}>{product.name}</h3>
-                </Link>
-                <p className={styles.description}>{product.description}</p>
-              </div>
-            </div>
+            <PreviewCard
+              data={product}
+              borderColor='yellowBorder'
+              textColor='yellowText'
+              btnType='primary'
+              key={product._id}
+            />
           ))}
         </div>
         <div className={styles.btnContainer}>
           <Button text='Order Online' href='/menu' btnType='primary' />
-          <Button text='Browse Menu' href='/menu' btnType='secondary' />
+          <Button text='Browse Menu' href='/menu' btnType='tertiary' />
         </div>
       </LayoutWrapper>
     </section>
