@@ -52,9 +52,6 @@ function Nav() {
       text: "Contact",
       href: "/contact",
     },
-    // {
-    //   text: "Cart",
-    // },
   ];
 
   return (

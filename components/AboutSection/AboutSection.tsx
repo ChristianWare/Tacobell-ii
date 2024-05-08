@@ -1,19 +1,26 @@
-import Label from "../Label/Label";
+"use client";
+
 import LayoutWrapper from "../LayoutWrapper";
 import styles from "./AboutSection.module.css";
 import Taco from "../../public/icons/taco.svg";
 import Image from "next/image";
 import Img1 from "../../public/images/img5.jpg";
 import Button from "../Button/Button";
+import { usePathname } from "next/navigation";
 
 const AboutSection = () => {
+  const pathname = usePathname();
+
   return (
     <div className={styles.container}>
       <LayoutWrapper>
         <div className={styles.content}>
           <div className={styles.left}>
             {/* <Label text='About Us' /> */}
-            <h2 className={styles.heading}>About us</h2>
+            {/* <h2 className={styles.heading}>About us</h2> */}
+            <h2 className={styles.heading}>
+              {pathname === "/" ? "About Us" : "Our story"}
+            </h2>
             <div className={styles.right}>
               <p className={styles.copy}>
                 Welcome to Taco Bell, where tradition meets innovation in every
@@ -30,9 +37,7 @@ const AboutSection = () => {
                   <Taco width={40} height={40} className={styles.icon} />
                 </div>
                 <div className={styles.itexRight}>
-                  <p className={styles.copyii}>
-                    Best tacos in the game
-                  </p>
+                  <p className={styles.copyii}>Best tacos in the game</p>
                 </div>
               </div>
               <div className={styles.iconTextContainer}>
@@ -40,9 +45,7 @@ const AboutSection = () => {
                   <Taco width={40} height={40} className={styles.icon} />
                 </div>
                 <div className={styles.itexRight}>
-                  <p className={styles.copyii}>
-                    Most items on our menu
-                  </p>
+                  <p className={styles.copyii}>Most items on our menu</p>
                 </div>
               </div>
               <div className={styles.iconTextContainer}>
@@ -50,18 +53,18 @@ const AboutSection = () => {
                   <Taco width={40} height={40} className={styles.icon} />
                 </div>
                 <div className={styles.itexRight}>
-                  <p className={styles.copyii}>
-                    Eat great even late
-                  </p>
+                  <p className={styles.copyii}>Eat great even late</p>
                 </div>
               </div>
-              <div className={styles.btnContainer}>
-                <Button
-                  href='/about'
-                  text='More about us'
-                  btnType='secondary'
-                />
-              </div>
+              {pathname === "/" && (
+                <div className={styles.btnContainer}>
+                  <Button
+                    href='/about'
+                    text='More about us'
+                    btnType='secondary'
+                  />
+                </div>
+              )}
             </div>
           </div>
           <div className={styles.right}>

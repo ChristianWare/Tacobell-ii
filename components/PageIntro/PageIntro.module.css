@@ -1,0 +1,154 @@
+.container {
+  position: relative;
+}
+
+.imgOverlay {
+  z-index: 2;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(rgba(119, 67, 219, 1), rgba(10, 7, 27, 0.7));
+}
+
+.img {
+  object-fit: cover;
+}
+
+.content {
+  gap: 5rem;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+.heading {
+  z-index: 3;
+  color: var(--tan);
+}
+
+.copy {
+  margin-top: 3rem;
+  color: var(--tan);
+  width: 90%;
+  z-index: 3;
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.btnContainer {
+  margin: 3rem 0rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.leftBottom {
+  display: flex;
+  align-items: center;
+  margin-top: 3rem;
+  width: fit-content;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  z-index: 3;
+}
+
+.b2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 10rem;
+}
+
+@media screen and (max-width: 1068px) {
+  .content {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    padding-top: 0rem;
+  }
+
+  .imgContainer,
+  .img {
+    height: 350px;
+    width: 100%;
+  }
+
+  .left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .right {
+    align-items: center;
+    justify-content: center;
+  }
+
+  .heading {
+    text-align: center;
+  }
+
+  .copy {
+    text-align: center;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (max-width: 820px) {
+  .content {
+    justify-content: center;
+  }
+
+  .btnContainer {
+    justify-content: center;
+  }
+
+  .leftBottom {
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .copy {
+    width: 100%;
+  }
+
+  .left {
+    align-items: flex-start;
+  }
+
+  .heading,
+  .copy {
+    text-align: left;
+  }
+
+  .right {
+    align-items: flex-start;
+  }
+
+  .btnContainer,
+  .leftBottom {
+    justify-content: flex-start;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .heading {
+    font-size: 7rem;
+  }
+}
