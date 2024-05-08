@@ -2,6 +2,10 @@ import PageIntro from "@/components/PageIntro/PageIntro";
 import Img from "../../public/images/crunchwrap.jpg";
 import AboutSection from "@/components/AboutSection/AboutSection";
 import Mission from "@/components/Mission/Mission";
+import Vision from "@/components/Vision/Vision";
+import Delivery from "@/components/Delivery/Delivery";
+import FinalCTA2 from "@/components/FinalCTA2/FinalCTA2";
+import FinalCta from "@/components/FinalCta/FinalCta";
 
 export default function AboutPage() {
   return (
@@ -13,6 +17,10 @@ export default function AboutPage() {
       />
       <AboutSection />
       <Mission />
+      <Vision />
+      <Delivery />
+      <FinalCTA2 />
+      <FinalCta />
     </div>
   );
 }
