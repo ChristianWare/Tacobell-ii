@@ -35,3 +35,21 @@
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 3rem;
 }
+
+@media screen and (max-width: 1168px) {
+  .bottom {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 968px) {
+  .bottom {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .bottom {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

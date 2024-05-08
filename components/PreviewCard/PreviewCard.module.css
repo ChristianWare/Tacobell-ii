@@ -2,6 +2,7 @@
   border: 2px solid var(--border);
   padding: 1rem;
   border-radius: 20px;
+  display: grid;
 }
 
 .imgContainer {
