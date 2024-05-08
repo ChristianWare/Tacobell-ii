@@ -16,8 +16,6 @@ const AboutSection = () => {
       <LayoutWrapper>
         <div className={styles.content}>
           <div className={styles.left}>
-            {/* <Label text='About Us' /> */}
-            {/* <h2 className={styles.heading}>About us</h2> */}
             <h2 className={styles.heading}>
               {pathname === "/" ? "About Us" : "Our story"}
             </h2>

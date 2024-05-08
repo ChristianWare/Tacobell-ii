@@ -46,7 +46,7 @@ function Nav() {
     },
     {
       text: "Menu",
-      href: "/features",
+      href: "/menu",
     },
     {
       text: "Contact",
