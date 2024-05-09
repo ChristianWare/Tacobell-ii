@@ -11,6 +11,7 @@ import Delivery from "@/components/Delivery/Delivery";
 import InstaFeed from "@/components/InstaFeed/InstaFeed";
 import FinalCTA2 from "@/components/FinalCTA2/FinalCTA2";
 import RotatingText from "@/components/RotatingText/RotatingText";
+import HowItWorks from "@/components/HowItWorks/HowItWorks";
 
 async function getData(slug: string) {
   const query = `*[_type == "product" && slug.current == "${slug}"][0] {
@@ -56,7 +57,7 @@ export default async function ProductPage({
       </LayoutWrapper>
       <Newest />
       <Delivery />
-      <InstaFeed />
+      <HowItWorks />
       <FinalCTA2 />
       <FinalCta />
     </div>
