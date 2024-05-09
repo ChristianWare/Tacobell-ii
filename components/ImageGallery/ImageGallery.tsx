@@ -19,6 +19,16 @@ export default function ImageGallery({ images }: iAppProps) {
   return (
     <div className={styles.container}>
       <div className={styles.content}>
+        <div className={styles.right}>
+          <div className={styles.imgContainerii}>
+            <Image
+              src={urlFor(bigImage).url()}
+              alt='Photo'
+              fill
+              className={styles.imgii}
+            />
+          </div>
+        </div>
         <div className={styles.left}>
           {images.map((image: any, idx: any) => (
             <div key={idx} className={styles.imgContainer}>
@@ -32,16 +42,6 @@ export default function ImageGallery({ images }: iAppProps) {
               />
             </div>
           ))}
-        </div>
-        <div className={styles.right}>
-          <div className={styles.imgContainerii}>
-            <Image
-              src={urlFor(bigImage).url()}
-              alt='Photo'
-              fill
-              className={styles.imgii}
-            />
-          </div>
         </div>
       </div>
     </div>

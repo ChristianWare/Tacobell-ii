@@ -5,7 +5,7 @@
 .top {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-gap: 3rem;
+  grid-gap: 7rem;
   margin-top: 5rem;
 }
 
@@ -22,7 +22,8 @@
 .description {
   color: var(--yellow);
   font-size: 1.7rem;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
+  width: 80%;
   color: var(--yellow);
   margin-top: 2rem;
 }
@@ -31,13 +32,11 @@
   .top {
     grid-template-columns: repeat(1, 1fr);
   }
-
-  .right {
-    order: -1;
-  }
-
 }
 
 @media screen and (max-width: 768px) {
-
+  .price,
+  .description {
+    width: 100%;
+  }
 }
