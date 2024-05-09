@@ -3,90 +3,94 @@
 import styles from "./ContactForm.module.css";
 import { useState } from "react";
 import toast from "react-hot-toast";
-import SubmitButton from "../SubmitButton/SubmitButton";
-import { sendEmail } from "@/actions/sendEmail";
+import { useForm, SubmitHandler } from "react-hook-form";
+
+type Inputs = {
+  firstName: string;
+  lastName: string;
+  email: string;
+  message: string;
+};
 
 const ContactForm = () => {
-  const [inputs, setInputs] = useState({
-    firstName: "",
-    lastName: "",
-    senderEmail: "",
-    message: "",
-  });
+  const [loading, setLoading] = useState(false);
 
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    setInputs((prev: any) => ({
-      ...prev,
-      [e.target.id]: e.target.value,
-    }));
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm<Inputs>();
+  const onSubmit: SubmitHandler<Inputs> = async (data) => {
+    setLoading(true);
+    const response = await fetch("/api/contact", {
+      method: "POST",
+      body: JSON.stringify(data),
+    }).then((res) => res.json());
+
+    if (response.messageId) {
+      toast.success("Thanks! We will be in touch soon 😀");
+    } else {
+      toast.error("Please try again sometime");
+    }
+
+    reset();
+    setLoading(false);
   };
+
   return (
     <div className={styles.content}>
       <div className={styles.bottom}>
-        {/* <div className={styles.left}></div> */}
+        <div className={styles.left}></div>
         <div className={styles.right}>
-          <form
-            className={styles.form}
-            action={async (formData) => {
-              const { data, error } = await sendEmail(formData);
-
-              if (error) {
-                toast.error(error);
-                return;
-              }
-              toast.success("Email sent successfully!");
-              setInputs({
-                firstName: "",
-                lastName: "",
-                senderEmail: "",
-                message: "",
-              });
-            }}
-          >
+          <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
             <div className={styles.namesContainer}>
               <div className={styles.labelInputBox}>
-                <label htmlFor='firstName'>
-                  First Name <span className={styles.required}>*</span>
-                </label>
+                <label htmlFor='firstName'>First Name</label>
                 <input
                   id='firstName'
-                  name='firstName'
                   type='text'
-                  value={inputs.firstName}
-                  onChange={handleChange}
-                  required
+                  {...register("firstName", { required: true })}
                 />
+                {errors.firstName && (
+                  <span className={styles.error}>
+                    *** First Name is required
+                  </span>
+                )}
               </div>
               <div className={styles.labelInputBox}>
-                <label htmlFor='lastName'>
-                  Last Name <span className={styles.required}>*</span>
-                </label>
+                <label htmlFor='lastName'>Last Name</label>
                 <input
                   id='lastName'
-                  name='lastName'
                   type='text'
-                  value={inputs.lastName}
-                  onChange={handleChange}
-                  required
+                  {...register("lastName", { required: true })}
                 />
+                {errors.lastName && (
+                  <span className={styles.error}>
+                    *** Last Name is required
+                  </span>
+                )}
               </div>
             </div>
             <div className={styles.everythingElse}>
               <div className={styles.labelInputBox}>
-                <label htmlFor='email'>
-                  Email <span className={styles.required}>*</span>
-                </label>
+                <label htmlFor='email'>Email</label>
                 <input
                   id='senderEmail'
                   type='email'
-                  name='senderEmail'
-                  value={inputs.senderEmail}
-                  onChange={handleChange}
-                  required
+                  {...register("email", {
+                    required: true,
+                    pattern: {
+                      value: /\S+@\S+\.\S+/,
+                      message: "Entered value does not match email format",
+                    },
+                  })}
+                  placeholder='So we can respond. We won&#39;t send you spam.'
                   maxLength={500}
                 />
+                {errors.email && (
+                  <span className={styles.error}>*** Email is required</span>
+                )}
               </div>
 
               <div className={styles.labelInputBox}>
@@ -95,19 +99,24 @@ const ContactForm = () => {
                 </label>
                 <textarea
                   id='message'
-                  name='message'
                   maxLength={5000}
-                  value={inputs.message}
-                  onChange={handleChange}
+                  {...register("message", { required: true })}
+                  placeholder='No solicitations, please.'
                 />
+                {errors.message && (
+                  <span className={styles.error}>*** Message is required</span>
+                )}
               </div>
             </div>
             <div className={styles.btnBtnContainer}>
-              <SubmitButton />
+              <div className={styles.btnContainer}>
+                <button className={styles.btn}>
+                  {loading ? "Sending..." : "Submit"}
+                </button>
+              </div>
             </div>
           </form>
         </div>
-          
       </div>
     </div>
   );

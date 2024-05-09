@@ -3,7 +3,7 @@ import localFont from "next/font/local";
 import { Inter, Staatliches } from "next/font/google";
 import "./globals.css";
 import ScrollIndicator from "@/components/ScrollIndicator/ScrollIndicator";
-import CartProvider from "@/components/Providers/Providers";
+import { Toaster } from "react-hot-toast";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -37,10 +37,21 @@ export default function RootLayout({
       <body
         className={`${inter.className} ${tuskerGrotesk.variable} ${mechsuit.variable} ${staatliches.variable}`}
       >
-        <CartProvider>
-          <ScrollIndicator />
-          {children}
-        </CartProvider>
+        <Toaster
+          position='top-center'
+          toastOptions={{
+            className: "toastFont",
+            duration: 6000,
+            style: {
+              border: "2px solid #7743db",
+              borderRadius: "50px",
+              textAlign: "center",
+              whiteSpace: "nowrap",
+            },
+          }}
+        />
+        <ScrollIndicator />
+        {children}
       </body>
     </html>
   );
