@@ -13,10 +13,20 @@ interface Props {
 
 const MenuSection = ({ data, categoryData }: Props) => {
   const [selectedCategory, setSelectedCategory] = useState<string>("");
+  const [currentPage, setCurrentPage] = useState<number>(1);
+  const itemsPerPage = 4;
 
   const filteredData = selectedCategory
     ? data.filter((product) => product.categoryName === selectedCategory)
     : data;
+
+  const indexOfLastItem = currentPage * itemsPerPage;
+  const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+  const currentItems = filteredData.slice(indexOfFirstItem, indexOfLastItem);
+
+  const paginate = (pageNumber: number) => setCurrentPage(pageNumber);
+
+  const totalPages = Math.ceil(filteredData.length / itemsPerPage);
 
   return (
     <div className={styles.container}>
@@ -24,28 +34,55 @@ const MenuSection = ({ data, categoryData }: Props) => {
         <div className={styles.content}>
           <div className={styles.top}>
             <div
-              className={styles.categoryName}
+              className={
+                selectedCategory === ""
+                  ? styles.activeCategory
+                  : styles.categoryName
+              }
               onClick={() => setSelectedCategory("")}
             >
               All
             </div>
-            {categoryData.map((y) => (
+            {categoryData.map((category) => (
               <h2
-                key={y._id}
-                className={styles.categoryName}
-                onClick={() => setSelectedCategory(y.name)}
+                key={category._id}
+                // className={styles.categoryName}
+                className={
+                  selectedCategory === category.name
+                    ? styles.activeCategory
+                    : styles.categoryName
+                }
+                onClick={() => {
+                  setSelectedCategory(category.name);
+                  setCurrentPage(1);
+                }}
               >
-                {y.name}
+                {category.name}
               </h2>
             ))}
           </div>
           <div className={styles.bottom}>
-            {filteredData.map((product) => (
+            {currentItems.map((product) => (
               <PreviewCard
                 data={product}
                 key={product._id}
                 btnType='secondaryii'
               />
+            ))}
+          </div>
+          <div className={styles.pagination}>
+            {Array.from({ length: totalPages }, (_, index) => (
+              <button
+                key={index}
+                onClick={() => paginate(index + 1)}
+                className={
+                  currentPage === index + 1
+                    ? styles.active
+                    : styles.paginationBtn
+                }
+              >
+                {index + 1}
+              </button>
             ))}
           </div>
         </div>

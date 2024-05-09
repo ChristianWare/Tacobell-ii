@@ -42,6 +42,10 @@
   margin-top: 1rem;
   z-index: 3;
   font-size: 3rem;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
 }
 
 .yellowText {
