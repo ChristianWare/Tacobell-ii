@@ -75,6 +75,7 @@
   z-index: 999;
   background-color: var(--black2);
   border-radius: 10px;
+  border: 2px solid var(--yellow);
 }
 
 .box {
