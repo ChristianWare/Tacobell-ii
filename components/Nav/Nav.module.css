@@ -195,13 +195,12 @@
   }
 
   .activeLink {
-    color: var(--green);
-    background-color: var(--black);
-    padding: 5px 25px;
+    color: var(--yellow);
+    background-color: var(--purple);
+    padding: 10px 25px;
     padding-right: 35px;
     border-top-left-radius: 0px;
     border-bottom-left-radius: 0px;
-    /* margin-top: 10rem !important; */
   }
 
   .bottomDesktop {

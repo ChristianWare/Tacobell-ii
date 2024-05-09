@@ -28,6 +28,13 @@
   margin-top: 2rem;
 }
 
+.rotatingTextBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
 @media screen and (max-width: 1000px) {
   .top {
     grid-template-columns: repeat(1, 1fr);

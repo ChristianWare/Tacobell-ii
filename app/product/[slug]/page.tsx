@@ -10,6 +10,7 @@ import FinalCta from "@/components/FinalCta/FinalCta";
 import Delivery from "@/components/Delivery/Delivery";
 import InstaFeed from "@/components/InstaFeed/InstaFeed";
 import FinalCTA2 from "@/components/FinalCTA2/FinalCTA2";
+import RotatingText from "@/components/RotatingText/RotatingText";
 
 async function getData(slug: string) {
   const query = `*[_type == "product" && slug.current == "${slug}"][0] {
@@ -47,6 +48,9 @@ export default async function ProductPage({
             <h1 className={styles.heading}>{data.name}</h1>
             <p className={styles.price}>{data.price}</p>
             <p className={styles.description}>{data.description}</p>
+            <div className={styles.rotatingTextBox}>
+              <RotatingText text={`• ${data.name} •`} />
+            </div>
           </div>
         </div>
       </LayoutWrapper>

@@ -100,7 +100,7 @@ function Nav() {
               </Link>
             </li>
           ))}
-          <ShoppingCartModal />
+          {/* <ShoppingCartModal /> */}
         </ul>
         {isOpen && (
           <div
