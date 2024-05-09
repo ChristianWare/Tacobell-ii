@@ -4,6 +4,7 @@ import styles from "./Nav.module.css";
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import ShoppingCartModal from "../ShoppingCartModal/ShoppingCartModal";
 
 function Nav() {
   const [isOpen, setIsOpen] = useState(false);
@@ -99,9 +100,7 @@ function Nav() {
               </Link>
             </li>
           ))}
-          <li className={styles.navItem}>
-            Cart <span>0</span>
-          </li>
+          <ShoppingCartModal />
         </ul>
         {isOpen && (
           <div

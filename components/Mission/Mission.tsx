@@ -13,10 +13,9 @@ const Mission = () => {
           <div className={styles.top}>
             <div className={styles.topLeft}>
               <h3 className={styles.heading}>
-                Empowering our brand with user-friendly direct ordering systems,
-                Taco Bell is dedicated to cutting out intermediary platforms,
-                enhancing trust and growth. Here&apos;s how we plan to redefine
-                the fast-food experience
+                We take pride in making the best Mexican style fast food
+                providing fast, friendly, & accurate service. Here&apos;s how we
+                plan to redefine the fast-food experience
               </h3>
             </div>
             <div className={styles.topRight}></div>

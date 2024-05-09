@@ -1,0 +1,84 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(8px);
+  z-index: 998;
+  display: none;
+}
+
+.overlay.show {
+  display: block;
+}
+
+.cartMenu span {
+  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 100%;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: var(--yellow);
+  color: var(--black);
+}
+
+.cartCount,
+.cartCountii {
+  font-size: 2.1rem;
+  font-weight: 700;
+  color: var(--yellow);
+  position: relative;
+  user-select: none;
+  scroll-behavior: smooth;
+  z-index: 998;
+  font-family: var(--staatliches);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  cursor: pointer;
+}
+
+.cartContents {
+  position: fixed;
+  right: -100%;
+  top: 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 5rem;
+  width: 100%;
+  height: 100%;
+  transition: 0.3s all ease-in;
+  z-index: 999;
+  background-color: var(--tan);
+  padding: 1rem;
+  padding-left: 2rem;
+  transform-origin: top;
+}
+
+.cartContents.active {
+  right: -65%;
+}
+
+.icon {
+  color: var(--black);
+  width: 30px;
+  height: 30px;
+}
+
+.header {
+  font-weight: 700;
+  font-size: 2.5rem;
+  color: var(--black);
+}
+
+.cartContents b {
+  display: block;
+  color: var(--black);
+}

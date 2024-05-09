@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import { Inter, Staatliches } from "next/font/google";
 import "./globals.css";
 import ScrollIndicator from "@/components/ScrollIndicator/ScrollIndicator";
+import CartProvider from "@/components/Providers/Providers";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -36,8 +37,10 @@ export default function RootLayout({
       <body
         className={`${inter.className} ${tuskerGrotesk.variable} ${mechsuit.variable} ${staatliches.variable}`}
       >
-        <ScrollIndicator />
-        {children}
+        <CartProvider>
+          <ScrollIndicator />
+          {children}
+        </CartProvider>
       </body>
     </html>
   );
