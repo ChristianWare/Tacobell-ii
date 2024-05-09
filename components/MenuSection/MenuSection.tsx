@@ -46,7 +46,6 @@ const MenuSection = ({ data, categoryData }: Props) => {
             {categoryData.map((category) => (
               <h2
                 key={category._id}
-                // className={styles.categoryName}
                 className={
                   selectedCategory === category.name
                     ? styles.activeCategory
