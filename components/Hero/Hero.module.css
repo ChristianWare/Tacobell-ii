@@ -1,6 +1,7 @@
 .container {
   position: relative;
-  height: 100vh;
+  /* height: 100vh; */
+  /* padding-bottom: 5rem; */
 }
 
 .imgOverlay {

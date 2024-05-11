@@ -3,10 +3,10 @@
 import LayoutWrapper from "../LayoutWrapper";
 import styles from "./AboutSection.module.css";
 import Taco from "../../public/icons/taco.svg";
-import Image from "next/image";
 import Img1 from "../../public/images/img5.jpg";
 import Button from "../Button/Button";
 import { usePathname } from "next/navigation";
+import ImageGridii from "../ImageGridii/ImageGridii";
 
 const AboutSection = () => {
   const pathname = usePathname();
@@ -19,7 +19,7 @@ const AboutSection = () => {
             <h2 className={styles.heading}>
               {pathname === "/" ? "About Us" : "Our story"}
             </h2>
-            <div className={styles.right}>
+            <div>
               <p className={styles.copy}>
                 Welcome to Taco Bell, where tradition meets innovation in every
                 dish we serve. Founded in 1948, our mission has been to provide
@@ -66,9 +66,13 @@ const AboutSection = () => {
             </div>
           </div>
           <div className={styles.right}>
-            <div className={styles.imgContainer}>
-              <Image src={Img1} alt='img' fill className={styles.img} />
-            </div>
+            <ImageGridii
+              src1={Img1}
+              src2={Img1}
+              src3={Img1}
+              src4={Img1}
+              src5={Img1}
+            />{" "}
           </div>
         </div>
       </LayoutWrapper>

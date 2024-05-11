@@ -82,6 +82,13 @@
   transform: rotate(45deg);
 }
 
+.right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
 @media screen and (max-width: 968px) {
   .content {
     grid-template-columns: repeat(1, 1fr);
