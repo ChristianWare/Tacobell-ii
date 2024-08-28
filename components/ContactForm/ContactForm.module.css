@@ -66,7 +66,7 @@
 .labelInputBox label {
   font-size: 1.4rem;
   font-weight: 600;
-  color: var(--black);
+  color: var(--green);
   opacity: 0.8;
   padding-left: 0.3rem;
   background-color: transparent;
@@ -74,12 +74,12 @@
 
 .labelInputBox input,
 .labelInputBox textarea {
-  border-radius: 5px;
-  border: 1px solid var(--black);
+  border-radius: 50px;
+  border: 1px solid var(--tan);
   height: 40px;
   width: 100%;
   background-color: var(--tan);
-  color: var(--black2);
+  color: var(--tan);
   padding: 1rem;
   width: 100%;
   font-weight: 400;
@@ -89,11 +89,12 @@
 
 .labelInputBox span {
   font-size: 1.4rem;
-  color: rgb(140, 139, 139);
+  color: rgb(192, 189, 189);
 }
 
 .labelInputBox textarea {
   height: 130px;
+  border-radius: 20px;
   resize: vertical;
 }
 
@@ -123,15 +124,15 @@
   z-index: 1;
   width: 100%;
   line-height: 1;
-  color: var(--yellow);
-  background-color: var(--black);
-  border: 2px solid var(--black);
+  color: var(--olive);
+  background-color: var(--green);
+  border: 2px solid var(--green);
   cursor: pointer;
 }
 
 .btn:hover {
-  background-color: var(--yellow);
-  color: var(--black);
+  background-color: transparent;
+  color: var(--green);
 }
 
 @media screen and (max-width: 1100px) {

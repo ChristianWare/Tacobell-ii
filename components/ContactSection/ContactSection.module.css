@@ -17,12 +17,12 @@
 }
 
 .heading {
-  color: var(--bgColor);
+  color: var(--green);
 }
 
 .headingii {
   width: 75%;
-  color: var(--bgColor);
+  color: var(--green);
   font-size: 3rem;
 }
 

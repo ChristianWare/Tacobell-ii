@@ -15,20 +15,20 @@ const navItems = [
     href: "/",
   },
   {
-    text: "Reviews",
-    href: "/reviews",
+    text: "Menu",
+    href: "/menu",
   },
   {
-    text: "Guides",
-    href: "/guides",
+    text: "Services",
+    href: "/services",
   },
   {
-    text: "Gear",
-    href: "/gear",
+    text: "About",
+    href: "/about",
   },
   {
-    text: "Glossary",
-    href: "/glossary",
+    text: "Contact",
+    href: "/contact",
   },
 ];
 
@@ -63,8 +63,9 @@ const Footer = () => {
               <div className={styles.logoBox}>
                 <h6 className={styles.logo}>Taco Bell</h6>
                 <p className={styles.copy}>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Facere, atque.
+                  Explore our diverse menu and indulge in tacos crafted with the
+                  freshest ingredients and unique, mouthwatering flavors that
+                  keep you coming back for more.
                 </p>
                 <br />
                 <div className={styles.socials}>
@@ -91,20 +92,20 @@ const Footer = () => {
               <div className={styles.heading}>CONTACT INFO</div>
               <div className={styles.box}>
                 <Email width={20} height={20} className={styles.iconii} />
-                info@gmail.com
+                info@tacobell.com
               </div>
               <div className={styles.box}>
                 <Facebook width={20} height={20} className={styles.iconii} />
-                facebook.com/catering
+                facebook.com/tacobell
               </div>
               <div className={styles.box}>
                 <Twitter width={20} height={20} className={styles.iconii} />
-                twitter.com/catering
+                twitter.com/tacobell
               </div>
             </div>
           </div>
           <div className={styles.bottom}>
-            <div className={styles.logoii}>Copyright &#169; 2024</div>
+            <div className={styles.logoii}>TACO BELL &#169; 2024</div>
             <ul className={styles.disclosures}>
               <li className={styles.disc}>TERMS</li>
               <li className={styles.disc}>PRIVACY</li>

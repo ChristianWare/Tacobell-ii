@@ -1,10 +1,10 @@
 import LayoutWrapper from "../LayoutWrapper";
 import styles from "./HowItWorks.module.css";
 import Image from "next/image";
-import Img from "../../public/images/tacolove1.jpg";
-import Img2 from "../../public/images/tacolove2.jpg";
-import Img3 from "../../public/images/tacolove3.jpg";
-import Img4 from "../../public/images/tacolove4.jpg";
+import Img from "../../public/images/browse.jpg";
+import Img2 from "../../public/images/customize.jpg";
+import Img3 from "../../public/images/craft.jpg";
+import Img4 from "../../public/images/savor.jpg";
 
 const data = [
   {
@@ -39,7 +39,9 @@ const HowItWorks = () => {
       <LayoutWrapper>
         <div className={styles.content}>
           <div className={styles.top}>
-            <h2 className={styles.heading}>How does your <br /> catering work?</h2>
+            <h2 className={styles.heading}>
+              How does your <br /> catering work?
+            </h2>
             <h3 className={styles.subHeading}>Your Steps:</h3>
           </div>
           <div className={styles.bottom}>

@@ -1,6 +1,6 @@
 import ContactForm from "../ContactForm/ContactForm";
 import styles from "./ContactSection.module.css";
-import Hamburger from "../../public/icons/taco.svg";
+import Taco from "../../public/icons/taco.svg";
 
 
 const ContactSection = () => {
@@ -17,7 +17,7 @@ const ContactSection = () => {
             here to craft a personalized menu that will leave a lasting
             impression on your guests.
           </p>
-          <Hamburger className={styles.hamburger} />
+          <Taco className={styles.hamburger} />
         </div>
         <div className={styles.right}>
           <ContactForm />
