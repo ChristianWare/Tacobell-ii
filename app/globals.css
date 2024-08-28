@@ -1,9 +1,11 @@
 :root {
-  --yellow: #fedf4b;
+  --green: #aeff12;
+  --green2: #dafc53;
+  --olive: #30533f;
+  --oliveii: #3c6950;
   --gray: #f4f4f6;
   --black: #2a2a2a;
   --black2: #383838;
-  --purple: #7743db;
   --white: #ffffff;
   --white2: #b7b5b5;
   --border: #d4d4d4;
@@ -17,6 +19,7 @@
   --tan: #f1f1e9;
   --tan2: #d3d3b5;
   --tan3: #f7f1cf;
+  --bgColor: #fffae6;
   --shadow: 20px 20px 50px rgba(0, 0, 0, 0.2);
 }
 
@@ -26,16 +29,12 @@
   box-sizing: border-box;
   text-decoration: none;
   line-height: 150%;
-  font-family: var(--inter);
+  font-family: var(--mulish);
   overscroll-behavior: none;
   scroll-behavior: smooth;
   scroll-margin-top: 20px;
   -webkit-tap-highlight-color: transparent;
 }
-
-/* div {
-  background-color: var(--black);
-} */
 
 html {
   font-size: 62.5%;
@@ -59,33 +58,32 @@ h5,
 h6,
 span {
   font-family: var(--staatliches);
-  color: var(--black);
-  hyphens: auto;
-  /* word-break: break-all; */
-  text-transform: uppercase;
+  color: var(--olive);
+  /* hyphens: auto; */
 }
 
 h1 {
-  font-size: 9.5rem;
-  line-height: 0.9;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: -1px;
+  font-size: 7rem;
+  font-weight: 400;
+  line-height: 0.85em;
 }
 
 h2 {
-  font-size: 5rem;
-  line-height: 120%;
+  font-size: 6.2rem;
+  font-weight: 400;
+  line-height: 0.97em;
 }
 
 h3 {
-  font-size: 3.5rem;
-  line-height: 130%;
+  font-size: 5.5rem;
+  line-height: 1em;
+  font-family: var(--fraunces);
+  font-style: italic;
   font-weight: 600;
 }
 
 h4 {
-  font-size: 3.1rem;
+  font-size: 2.8rem;
 }
 
 h5 {
@@ -105,25 +103,21 @@ button {
 p,
 input,
 textarea {
-  font-weight: 400;
   hyphens: auto;
-  font-size: 1.6rem;
-  line-height: 150%;
-  color: var(--text3);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.2em;
+  color: var(--olive);
 }
 
 input:focus,
-.textarea:focus {
-  outline: none !important;
+textarea:focus,
+select:focus {
+  outline: none;
 }
 
 .blog {
   font-size: 1.6rem;
-}
-
-.toastFont {
-  font-family: var(--staatliches);
-  font-weight: 700;
 }
 
 /* ::-webkit-scrollbar-thumb {
@@ -147,14 +141,6 @@ input:focus,
     font-size: 55%;
   }
 
-  /* h1 {
-    font-size: 12rem;
-  }
-
-  h2 {
-    font-size: 8rem;
-  } */
-
   /* p {
     font-size: 113.7%;
   } */
@@ -165,13 +151,6 @@ input:focus,
     font-size: 50%;
   }
 
-  /* h1 {
-    font-size: 8rem;
-  }
-
-  h2 {
-    font-size: 6rem;
-  } */
 
   p,
   label {
@@ -183,9 +162,9 @@ input:focus,
 } */
 
 /* Only use in production */
-@media screen and (max-width: 480px) {
+/* @media screen and (max-width: 623px) {
   h1,
   h2 {
     letter-spacing: -0.1rem;
   }
-}
+} */

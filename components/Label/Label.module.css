@@ -1,23 +1,36 @@
-.div {
-  background-color: transparent;
-}
+
 
 .span {
-  font-weight: 700;
   font-size: 1.4rem;
-  color: var(--yellow);
-  margin-bottom: 1rem;
+  color: var(--text);
   display: block;
-  font-family: var(--inter);
+  font-family: var(--mulish);
+  font-weight: 700;
   text-transform: uppercase;
   z-index: 999;
-  background-color: transparent;
+  user-select: none;
 }
 
 .white {
-  color: var(--white);
+  color: var(--green);
 }
 
 .tan {
   color: var(--tan);
+}
+
+.greenii {
+  color: var(--green);
+  background-color: var(--olive);
+  border-radius: 50px;
+  padding: 0.5rem 1.3rem;
+}
+
+.category {
+  background-color: var(--green);
+  border: 1px solid var(--olive);
+  color: var(--olive);
+  padding: 0.3rem 1.5rem;
+  border-radius: 50px;
+  font-size: 1.2rem;
 }

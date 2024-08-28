@@ -1,12 +1,20 @@
 "use client";
 
 import styles from "./Nav.module.css";
-import { useState, useEffect } from "react";
+import { useState, useEffect, FC } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import ShoppingCartModal from "../ShoppingCartModal/ShoppingCartModal";
+import Button from "../Button/Button";
+import Person from "../../../public/icons/person.svg";
+import Bell from "../../public/icons/bell.svg";
 
-function Nav() {
+interface Props {
+  color?: string;
+  barColor?: string;
+}
+
+const Nav: FC<Props> = ({ color = "", barColor = "" }) => {
+
   const [isOpen, setIsOpen] = useState(false);
   const [isOverlayVisible, setIsOverlayVisible] = useState(false);
 
@@ -42,16 +50,24 @@ function Nav() {
 
   const navItems = [
     {
-      text: "About",
-      href: "/about",
-    },
-    {
       text: "Menu",
       href: "/menu",
     },
     {
+      text: "Services",
+      href: "/services",
+    },
+    {
+      text: "About",
+      href: "/about",
+    },
+    {
       text: "Contact",
       href: "/contact",
+    },
+    {
+      text: "Blog",
+      href: "/blog",
     },
   ];
 
@@ -59,8 +75,11 @@ function Nav() {
     <header className={styles.header}>
       <nav className={styles.navbar}>
         <div className={styles.logo}>
-          <Link href='/' className={styles.logo}>
-            Taco Bell
+          <Link href='/' className={`${styles.logo} ${styles[color]}`}>
+            Taco Bell{" "}
+            <span className={styles.iconBox}>
+              <Bell className={styles.icon} />
+            </span>
           </Link>
         </div>
         <ul
@@ -75,8 +94,8 @@ function Nav() {
               href='/'
               className={
                 pathname === "/"
-                  ? `${styles.activeLink}  ${styles.navItem}`
-                  : styles.navItem
+                  ? `${styles.activeLink}  ${styles.navItem} ${styles[color]}`
+                  : `${styles.navItem} ${styles[color]}`
               }
             >
               Home
@@ -92,15 +111,18 @@ function Nav() {
                 href={navItem.href}
                 className={
                   pathname.includes(navItem.href)
-                    ? `${styles.activeLink}  ${styles.navItem}`
-                    : styles.navItem
+                    ? `${styles.activeLink}  ${styles.navItem} ${styles[color]}`
+                    : `${styles.navItem} ${styles[color]}`
                 }
               >
                 {navItem.text}
               </Link>
             </li>
           ))}
-          {/* <ShoppingCartModal /> */}
+
+          <div className={styles.btnContainer}>
+            <Button href='/order' text='We Cater !' btnType='navBtn' />
+          </div>
         </ul>
         {isOpen && (
           <div
@@ -121,12 +143,12 @@ function Nav() {
           }
           onClick={openMenu}
         >
-          <span className={styles.whiteBar}></span>
-          <span className={styles.whiteBar}></span>
-          <span className={styles.whiteBar}></span>
+          <span className={`${styles.whiteBar} ${styles[barColor]}`}></span>
+          <span className={`${styles.whiteBar} ${styles[barColor]}`}></span>
+          <span className={`${styles.whiteBar} ${styles[barColor]}`}></span>
         </span>
       </nav>
     </header>
   );
-}
+};
 export default Nav;

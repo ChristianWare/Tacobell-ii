@@ -4,8 +4,6 @@ import Breakfast from "../../public/icons/breakfast.svg";
 import Fries from "../../public/icons/fries.svg";
 import Drinks from "../../public/icons/drinks.svg";
 import Dessert from "../../public/icons/dessert.svg";
-import C1 from "../C1/C1";
-import ImageGrid from "../ImageGrid/ImageGrid";
 
 const preHero = [
   {
@@ -51,8 +49,6 @@ const PostHero = () => {
             </div>
           ))}
         </div>
-        <h2 className={styles.heading}>Most Popular</h2>
-        <ImageGrid />
       </LayoutWrapper>
     </div>
   );

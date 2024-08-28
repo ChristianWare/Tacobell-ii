@@ -8,7 +8,7 @@ interface Props {
 
 const Label: FC<Props> = ({ text, color = "" }) => {
   return (
-    <div className={styles.div}>
+    <div className={styles.container}>
       <span className={`${styles.span} ${styles[color]}`}>{text}</span>
     </div>
   );

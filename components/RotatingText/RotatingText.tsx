@@ -3,22 +3,24 @@
 import { useEffect, useState } from "react";
 import styles from "./RotatingText.module.css";
 import { FC } from "react";
-import Taco from "../../public/icons/taco.svg";
 
 interface RotatingTextProps {
   text: string;
-  color?: string;
   showArrow?: boolean;
-  showEmoji?: boolean;
+  color?: string;
 }
 
-const RotatingText: FC<RotatingTextProps> = ({ text, color = "" }) => {
+const RotatingText: FC<RotatingTextProps> = ({
+  text,
+  color = "",
+}) => {
   const [rotationAngle, setRotationAngle] = useState(0);
 
   useEffect(() => {
     const scrollListener = () => {
       const scrollY = window.scrollY;
-      const newRotationAngle = scrollY * 0.5;
+      // Adjust the rotation speed as needed by multiplying scrollY by an appropriate factor
+      const newRotationAngle = scrollY * 0.5; // You can change the factor
       setRotationAngle(newRotationAngle);
     };
 
@@ -48,7 +50,7 @@ const RotatingText: FC<RotatingTextProps> = ({ text, color = "" }) => {
         a 37,37 0 1,1 -74,0'
           />
         </defs>
-        <text font-size='12.2'>
+        <text font-size='11'>
           <textPath
             className={`${styles.svg} ${styles[color]}`}
             xlinkHref='#circle'
@@ -57,13 +59,7 @@ const RotatingText: FC<RotatingTextProps> = ({ text, color = "" }) => {
           </textPath>
         </text>
       </svg>
-      <div className={styles.iconContainer}>
-        <Taco
-          className={`${styles.icon} ${styles[color]}`}
-          width={100}
-          height={100}
-        />
-      </div>
+      
     </div>
   );
 };

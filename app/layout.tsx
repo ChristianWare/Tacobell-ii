@@ -1,22 +1,29 @@
+import type { Metadata } from "next";
+import { Inter, Mulish, Staatliches, Fraunces } from "next/font/google";
 import localFont from "next/font/local";
-
-import { Inter, Staatliches } from "next/font/google";
 import "./globals.css";
-import ScrollIndicator from "@/components/ScrollIndicator/ScrollIndicator";
-import { Toaster } from "react-hot-toast";
+import Footer from "../components/Footer/Footer";
+import Script from "next/script";
+import PlausibleProvider from "next-plausible";
+import ScrollIndicator from "../components/ScrollIndicator/ScrollIndicator";
+import FinalCTA2 from "../components/FinalCTA2/FinalCTA2";
 
-const inter = Inter({ subsets: ["latin"] });
-
-const tuskerGrotesk = localFont({
-  src: "../public/fonts/tuskerGrotesk.ttf",
-  variable: "--tuskerGrotesk",
+const inter = Inter({
+  weight: ["400", "500", "600", "700"],
+  style: ["normal"],
+  subsets: ["latin"],
+  variable: "--inter",
   display: "swap",
+  adjustFontFallback: false,
 });
 
-const mechsuit = localFont({
-  src: "../public/fonts/Mechsuit.otf",
-  variable: "--mechsuit",
+const mulish = Mulish({
+  weight: ["400", "500", "600", "700"],
+  style: ["normal"],
+  subsets: ["latin"],
+  variable: "--mulish",
   display: "swap",
+  adjustFontFallback: false,
 });
 
 const staatliches = Staatliches({
@@ -27,6 +34,14 @@ const staatliches = Staatliches({
   adjustFontFallback: false,
 });
 
+const fraunces = Fraunces({
+  weight: ["400", "600"],
+  style: ["normal", "italic"],
+  subsets: ["latin"],
+  variable: "--fraunces",
+  adjustFontFallback: false,
+});
+
 export default function RootLayout({
   children,
 }: {
@@ -34,24 +49,17 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en'>
+      <head>
+        <PlausibleProvider domain='eliteretreatrentals.com' />
+      </head>
+
       <body
-        className={`${inter.className} ${tuskerGrotesk.variable} ${mechsuit.variable} ${staatliches.variable}`}
+        className={`${inter.variable} ${staatliches.variable} ${mulish.variable} ${fraunces.variable}`}
       >
-        <Toaster
-          position='top-center'
-          toastOptions={{
-            className: "toastFont",
-            duration: 6000,
-            style: {
-              border: "2px solid #7743db",
-              borderRadius: "50px",
-              textAlign: "center",
-              whiteSpace: "nowrap",
-            },
-          }}
-        />
         <ScrollIndicator />
         {children}
+        <FinalCTA2 />
+        <Footer />
       </body>
     </html>
   );

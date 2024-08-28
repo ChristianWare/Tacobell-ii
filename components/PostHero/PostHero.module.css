@@ -1,5 +1,6 @@
 .container {
   background-color: var(--tan);
+  padding-top: 10rem;
 }
 
 .contentTop {
@@ -8,8 +9,6 @@
   align-items: center;
   justify-content: center;
   gap: 2rem;
-  border-bottom: 1px solid var(--border);
-  padding-bottom: 3rem;
   margin-bottom: 3rem;
 }
 
@@ -19,10 +18,6 @@
 }
 
 .heading {
-  line-height: 120%;
-  font-weight: 500;
-  font-family: var(--staatliches);
-  color: var(--purple);
   text-align: center;
   width: 100%;
 }
@@ -30,7 +25,6 @@
 .copy {
   text-align: center;
   width: 60%;
-  font-weight: 600;
 }
 
 .contentBottom {
@@ -42,6 +36,7 @@
 
 .box {
   background-color: var(--white);
+  border: 2px solid var(--olive);
   border-radius: 10px;
   padding: 2rem;
   display: flex;
@@ -52,18 +47,19 @@
 
 .icon {
   margin-bottom: 1rem;
-  color: var(--purple);
+  color: var(--olive);
 }
 
 .value {
   font-size: 2.6rem;
+  text-align: center;
+  margin-top: 1rem;
   margin-bottom: 2rem;
-  font-family: var(--staatliches);
 }
 
 .description {
-  color: var(--text4);
-  font-weight: 500;
+  opacity: 0.7;
+  font-size: 1.6rem;
   text-align: center;
 }
 
