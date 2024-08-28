@@ -1,9 +1,6 @@
 import styles from "./Popular.module.css";
 import LayoutWrapper from "../LayoutWrapper";
 import Button from "../Button/Button";
-import Image from "next/image";
-import Label from "../Label/Label";
-import { usePathname } from "next/navigation";
 import { client } from "@/app/lib/sanity";
 import { simplifiedProduct } from "@/app/interface";
 import PreviewCard from "../PreviewCard/PreviewCard";

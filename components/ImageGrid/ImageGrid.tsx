@@ -1,93 +1,65 @@
 import Image from "next/image";
 import styles from "./ImageGrid.module.css";
-import Img from "../../public/images/img1.png";
-import Fries from "../../public/images/fries.jpg";
-import Chalupa from "../../public/images/chalupa.jpg";
-import CrunchWrap from "../../public/images/crunchwrap.jpg";
-import Tacos from "../../public/images/tacos.webp";
-import Taco from "../../public/images/taco.jpg";
-import Burrito from "../../public/images/burrito.jpg";
-import ContentPadding from "../ContentPadding/ContentPadding";
+import Label from "../Label/Label";
+import { urlFor } from "@/app/lib/sanity"; // Import urlFor function
 
-const ImageGrid = () => {
+interface Props {
+  images: any[];
+  text: string;
+}
+
+const ImageGrid = ({ images, text }: Props) => {
   return (
-    <div className={styles.content}>
-      <ContentPadding>
-        <div className={styles.boxContainer}>
-          <div className={styles.box1}>
+    <div className={styles.imgGrid}>
+      <div className={styles.gridLeft}>
+        {images[0] && (
+          <div className={styles.imgContainer}>
             <Image
-              src={Fries}
-              alt='Nacho fries'
-              layout='fill'
-              objectFit='cover'
+              src={urlFor(images[0]).url()} // Use urlFor to generate the image URL
+              alt={images[0]?.alt || "Image 1"}
+              fill
+              className={styles.img}
+            />
+            <div className={styles.labelContainer}>
+              <Label text={text} color='category' />
+            </div>
+          </div>
+        )}
+      </div>
+      <div className={styles.gridRight}>
+        {images[1] && (
+          <div className={styles.imgContainer2}>
+            <Image
+              src={urlFor(images[1]).url()} // Use urlFor to generate the image URL
+              alt={images[1]?.alt || "Image 2"}
+              fill
               className={styles.img}
             />
           </div>
-          <div className={styles.box2}>
+        )}
+        {images[2] && (
+          <div className={styles.imgContainer3}>
             <Image
-              src={Chalupa}
-              alt='drone image 2'
-              layout='fill'
-              objectFit='cover'
+              src={urlFor(images[2]).url()} // Use urlFor to generate the image URL
+              alt={images[2]?.alt || "Image 3"}
+              fill
               className={styles.img}
             />
           </div>
-          <div className={styles.box3}>
-            <h5>Nacho Fries</h5>
-          </div>
-
-          <div className={styles.box4}>
-            <h5>Challupas</h5>
-            <a></a>
-          </div>
-
-          <div className={styles.box5}>
+        )}
+        {images[3] && (
+          <div className={styles.imgContainer3}>
             <Image
-              src={Taco}
-              alt='drone image 3'
-              layout='fill'
-              objectFit='cover'
+              src={urlFor(images[3]).url()} // Use urlFor to generate the image URL
+              alt={images[3]?.alt || "Image 4"}
+              fill
               className={styles.img}
             />
           </div>
-        </div>
-        <div className={styles.boxContainer2}>
-          <div className={styles.box1B}>
-            <Image
-              src={CrunchWrap}
-              alt='drone image 4'
-              layout='fill'
-              objectFit='cover'
-              className={styles.img}
-            />
-          </div>
-          <div className={styles.box2B}>
-            <h5>Crunchwrap Supreme</h5>
-          </div>
-          <div className={styles.box3B}>
-            <Image
-              src={Tacos}
-              alt='drone image 5'
-              layout='fill'
-              objectFit='cover'
-              className={styles.img}
-            />
-          </div>
-          <div className={styles.box4B}>
-            <h5>Gordita Crunch</h5>
-          </div>
-          <div className={styles.box5B}>
-            <Image
-              src={Burrito}
-              alt='drone image 6'
-              layout='fill'
-              objectFit='cover'
-              className={styles.img}
-            />
-          </div>
-        </div>
-      </ContentPadding>
+        )}
+      </div>
     </div>
   );
 };
+
 export default ImageGrid;

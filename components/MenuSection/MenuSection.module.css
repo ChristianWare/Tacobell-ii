@@ -54,7 +54,7 @@
 .active {
   font-size: 4rem;
   font-family: var(--staatliches);
-  color: var(--black);
+  color: var(--olive);
   background-color: var(--white);
   border: 1px solid var(--border);
   border-radius: 10px;
@@ -64,7 +64,7 @@
 }
 
 .active {
-  background-color: var(--purple);
+  background-color: var(--olive);
   color: var(--tan);
 }
 

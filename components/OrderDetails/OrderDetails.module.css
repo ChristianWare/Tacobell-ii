@@ -1,0 +1,151 @@
+.content {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-gap: 3rem;
+}
+
+.left {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 2rem;
+}
+
+.imgContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.img {
+  object-fit: cover;
+  border-radius: 20px;
+  border: 1px solid var(--olive);
+}
+
+.form {
+  /* width: 70%; */
+  /* margin-left: auto; */
+  /* margin-right: auto; */
+  border: 1px solid var(--olive);
+  border-radius: 20px;
+  padding: 3rem;
+  /* margin-top: -5rem; */
+}
+
+.namesContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+  width: 100%;
+}
+
+.labelInputBox {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  margin-bottom: 3rem;
+  flex: 1;
+  width: 100%;
+}
+
+.labelInputBox label {
+  font-weight: 600;
+  font-size: 1.6rem;
+  color: var(--olive);
+  margin-bottom: 0.5rem;
+}
+
+.labelInputBox input,
+.labelInputBox select,
+.labelInputBox textarea {
+  border: none;
+  width: 100%;
+  background-color: transparent;
+  border: 1px solid var(--olive);
+  border-radius: 50px;
+  color: var(--olive);
+  padding: 1.5rem 2rem;
+  padding-left: 2rem;
+}
+
+.labelInputBox textarea {
+  height: 200px;
+  resize: vertical;
+  border-radius: 20px;
+}
+
+.datePicker {
+  width: 100%;
+  padding: 2rem;
+  padding-left: 2rem;
+  background-color: transparent;
+  border-bottom: 1px solid var(--olive);
+  color: var(--olive);
+  font-weight: 400;
+  height: 55px;
+}
+
+.fieldErrors {
+  background-color: red;
+}
+
+.required {
+  color: red !important;
+}
+
+.btnBtnContainer {
+  margin-top: 3rem;
+}
+
+.btnContainer {
+  display: grid;
+  width: 100%;
+}
+
+.error {
+  color: red;
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-top: 0.5rem;
+}
+
+.success {
+  color: var(--purple);
+}
+
+@media screen and (max-width: 1100px) {
+  .content {
+    grid-template-columns: repeat(1, 1fr);
+    /* gap: 0rem; */
+  }
+
+  .left {
+    flex-direction: row;
+  }
+
+  .imgContainer {
+    height: 200px;
+    /* display: none; */
+  }
+}
+
+@media screen and (max-width: 568px) {
+   .left {
+    flex-direction: column;
+  }
+
+  
+  .namesContainer {
+    flex-direction: column;
+    gap: 0rem;
+  }
+
+  .btnBtnContainer {
+    display: grid;
+    width: 100%;
+  }
+}

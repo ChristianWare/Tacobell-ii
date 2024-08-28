@@ -1,0 +1,78 @@
+.container {
+  position: relative;
+  z-index: 1;
+}
+
+.btn {
+  text-align: center;
+  font-size: 2.3rem;
+  font-family: var(--staatliches);
+  white-space: nowrap;
+  border-radius: 50px;
+  user-select: none;
+  transition: all 0.1s ease-in;
+  display: inline-block;
+  padding: 8px 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.primary {
+  color: var(--olive);
+  background-color: var(--green);
+  border: 2px solid var(--olive);
+}
+
+.primaryii {
+  color: var(--white);
+  background-color: var(--black);
+  border: 2px solid var(--black);
+}
+
+.primaryiv {
+  color: var(--olive);
+  background-color: transparent;
+  border: 2px solid var(--olive);
+}
+
+.secondary {
+  color: var(--bgColor);
+  background-color: transparent;
+  border: 2px solid var(--bgColor);
+}
+
+.tertiary {
+  color: var(--white);
+  background-color: var(--purple);
+  border: 2px solid var(--purple);
+}
+
+.navBtn {
+  padding: 10px 15px;
+  font-weight: 600;
+  color: var(--white);
+  background-color: var(--black);
+  border: 2px solid var(--black);
+  font-size: 1.4rem;
+}
+
+.navBtnii {
+  padding: 10px 15px;
+  font-weight: 600;
+  color: var(--white);
+  background-color: var(--purple);
+  border: 2px solid var(--white);
+}
+
+/* @media screen and (max-width: 768px) {
+  .btn {
+    font-size: 2rem;
+  }
+} */
