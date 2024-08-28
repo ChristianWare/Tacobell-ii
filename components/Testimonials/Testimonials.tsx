@@ -2,7 +2,7 @@ import styles from "./Testimonials.module.css";
 import StarCluster from "../StarCluster/StarCluster";
 import Person from "../../public/icons/person.svg";
 import Pasta from "../../public/icons/salad.svg";
-import Hamburger from "../../public/icons/Taco.svg";
+import Taco from "../../public/icons/taco.svg";
 
 const reviews = [
   {
@@ -92,7 +92,7 @@ const Testimonials = () => {
         <div className={styles.bottom}>
           <div className={styles.top}>
             <Pasta className={styles.pasta} />
-            <Hamburger className={styles.hamburger} />
+            <Taco className={styles.hamburger} />
             <h2 className={styles.heading}>What our clients say</h2>
             <p className={styles.copy}>
               Discover What Our Clients Have to Say About Their Dining
