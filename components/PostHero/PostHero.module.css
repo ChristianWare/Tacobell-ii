@@ -37,7 +37,9 @@
 .box {
   background-color: var(--white);
   border: 2px solid var(--olive);
-  border-radius: 10px;
+  border-radius: 20px;
+  border-top-right-radius: 0px;
+  border-top-left-radius: 0px;
   padding: 2rem;
   display: flex;
   flex-direction: column;

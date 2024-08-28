@@ -48,8 +48,6 @@
   width: 100%;
   border: 2px solid var(--olive);
   border-bottom: 0px;
-  border-top-right-radius: 20px;
-  border-top-left-radius: 20px;
   padding: 1rem;
 }
 

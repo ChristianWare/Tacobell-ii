@@ -39,8 +39,8 @@ const HowItWorks = () => {
       <LayoutWrapper>
         <div className={styles.content}>
           <div className={styles.top}>
-            <h2 className={styles.heading}>How does it work?</h2>
-            <h3 className={styles.subHeading}>Your Steps</h3>
+            <h2 className={styles.heading}>How does your <br /> catering work?</h2>
+            <h3 className={styles.subHeading}>Your Steps:</h3>
           </div>
           <div className={styles.bottom}>
             {data.map((x) => (

@@ -8,7 +8,7 @@ import styles from "./FinalCTA2.module.css";
 import Button from "../Button/Button";
 import RotatingText from "../RotatingText/RotatingText";
 import { motion } from "framer-motion";
-import { fadeIn } from "../../animation/variants";
+// import { fadeIn } from "../../animation/variants";
 import Label from "../Label/Label";
 
 const FinalCTA2 = () => {
@@ -32,17 +32,15 @@ const FinalCTA2 = () => {
               // viewport={{ once: false, amount: 0.3 }}
               className={styles.left}
             >
-              <Label text='Chris Ware Agency' color='white' />
+              <Label text='Taco Bell' color='white' />
               <h2 className={styles.heading}>
-                We are your event catering experts.
+                Ready to Savor the Flavor? Order Now!
               </h2>
-              {/* <p className={styles.copy}>
-                Our custom direct booking websites empower property owners,
-                providing control, flexibility, and increased revenue compared
-                to traditional platforms like Airbnb. Elevate your rental
-                business, stand out from the crowd, and maximize your profits
-                with our tailored solutions.
-              </p> */}
+              <p className={styles.copy}>
+                Jump into a journey of taste with just a few clicks. Place your
+                order today and let us bring your favorite meals directly to
+                your doorstep, fresh and bursting with flavor.
+              </p>
               <div className={styles.btnContainer}>
                 <Button
                   text='Start your order'

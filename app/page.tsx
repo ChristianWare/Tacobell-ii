@@ -5,6 +5,7 @@ import PostHero from "@/components/PostHero/PostHero";
 import HowItWorks from "@/components/HowItWorks/HowItWorks";
 import AboutUsSection from "@/components/AboutUsSection/AboutUsSection";
 import Usp from "@/components/Usp/Usp";
+import Popular from "@/components/Popular/Popular";
 
 export default function Home() {
   return (
@@ -14,8 +15,7 @@ export default function Home() {
       <AboutUsSection />
       <Usp />
       <HowItWorks />
-      <Newest />
-      <HowItWorks />
+      <Popular />
       <Delivery />
     </div>
   );

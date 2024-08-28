@@ -1,9 +1,8 @@
 import { simplifiedProduct } from "@/app/interface";
 import styles from "./PreviewCard.module.css";
-import Link from "next/link";
 import Image from "next/image";
 import Button from "../Button/Button";
-import { useState, useEffect } from "react";
+import Label from "../Label/Label";
 
 interface Props {
   data: simplifiedProduct;
@@ -14,36 +13,33 @@ interface Props {
 
 const PreviewCard = ({
   data,
-  borderColor = "",
-  textColor = "",
-  btnType = "",
 }: Props) => {
   return (
-    <div className={`${styles.container} ${styles[borderColor]}`}>
-      <Link href={`/product/${data.slug}`} className={styles.slug}>
-        <div className={styles.imgContainer}>
-          <Image src={data.imageUrl} alt='image' fill className={styles.img} />
-          <p className={`${styles[`${data.categoryName}`]} ${styles.category}`}>
-            {data.categoryName}
-          </p>
-        </div>
-      </Link>
-      <div className={styles.details}>
-        <Link href={`/data/${data.slug}`}>
-          <h3 className={`${styles.productName} ${styles[textColor]}`}>
-            {data.name}
-          </h3>
-        </Link>
-        <p className={styles.description}>{data.price}</p>
-      </div>
-      <div className={styles.btnContainer}>
-        <Button
-          href={`/product/${data.slug}`}
-          text='More Details'
-          btnType={btnType}
+    <div className={styles.card}>
+      <div className={styles.imgContainer}>
+        <Image
+          src={data.imageUrl ? data.imageUrl : "/images/default_room_image.jpg"}
+          alt=''
+          fill
+          className={styles.img}
         />
+        <div className={styles.labelContainer}>
+          <Label text={data.categoryName} color='category' />
+        </div>
+      </div>
+      <h3 className={styles.title}>{data.name}</h3>
+      <div className={styles.info}>
+        <p className={styles.price}>{data.description}</p>
+        <div className={styles.btnContainer}>
+          <Button
+            btnType='primaryiv'
+            text='More Details'
+            href={`/product/${data.slug}`}
+          />
+        </div>
       </div>
     </div>
   );
 };
+
 export default PreviewCard;

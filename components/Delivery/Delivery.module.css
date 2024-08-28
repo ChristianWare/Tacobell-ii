@@ -1,6 +1,7 @@
 .container {
-  background-color: var(--purple);
+  background-color: var(--olive);
   padding-top: 9rem;
+  margin-bottom: 9rem;
 }
 
 .top,
@@ -13,7 +14,7 @@
   margin-left: auto;
   margin-right: auto;
   width: 70%;
-  color: var(--yellow);
+  color: var(--green);
 }
 
 .bottom {
@@ -25,7 +26,7 @@
 }
 
 .icon {
-  color: var(--yellow);
+  color: var(--green);
 }
 
 @media screen and (max-width: 480px) {
