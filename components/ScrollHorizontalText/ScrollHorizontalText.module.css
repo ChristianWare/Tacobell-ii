@@ -1,0 +1,59 @@
+.slider {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  border-top: 1px solid var(--green);
+  border-bottom: 1px solid var(--green);
+  user-select: none;
+  z-index: 999;
+  /* background-color: var(--bgColor); */
+}
+
+.bottomBorder {
+  border-bottom: 1px solid var(--black2);
+}
+
+.track {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: scroll 60s linear infinite;
+  gap: 0rem;
+}
+
+.text {
+  color: var(--green);
+  font-size: 3rem;
+  font-family: var(--fraunces);
+  font-style: italic;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  padding-top: 0.2rem;
+}
+
+.icon2 {
+  width: 3.5rem;
+  height: 3.5rem;
+  margin-top: 1.5rem;
+  margin-left: 2rem;
+  margin-right: 0.5rem;
+  position: relative;
+  left: -5px;
+  color: var(--green);
+  transform: rotate(35deg);
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.slider:hover .track {
+  animation-play-state: paused !important;
+}

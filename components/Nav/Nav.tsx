@@ -73,7 +73,7 @@ const Nav: FC<Props> = ({ color = "", barColor = "" }) => {
           <Link href='/' className={`${styles.logo} ${styles[color]}`}>
             Taco Bell{" "}
             <span className={styles.iconBox}>
-              <Bell className={styles.icon} />
+              <Bell className={`${styles.icon} ${styles[color]}`} />
             </span>
           </Link>
         </div>
