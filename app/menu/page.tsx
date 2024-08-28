@@ -7,6 +7,7 @@ import FinalCta from "@/components/FinalCta/FinalCta";
 import { client } from "../lib/sanity";
 import { categoryData, simplifiedProduct } from "../interface";
 import MenuHero from "@/components/MenuHero/MenuHero";
+import Faq from "@/components/Faq/Faq";
 
 async function getProductData() {
   const query = `*[_type == "product"]  {
@@ -40,17 +41,11 @@ export default async function MenuPage() {
   const categoryData: categoryData[] = await getCategoryData();
 
   return (
-    <div>
-      {/* <PageIntro
-        heading='Menu'
-        copy="Discover the delicious variety Taco Bell has to offer with our extensive menu of mouth-watering options. From classic favorites to exciting new flavors, there's something for everyone to enjoy."
-        src={Img}
-      /> */}
+    <main>
       <MenuHero />
       <MenuSection data={data} categoryData={categoryData} />
+      <Faq />
       <Delivery />
-      <FinalCTA2 />
-      <FinalCta />
-    </div>
+    </main>
   );
 }

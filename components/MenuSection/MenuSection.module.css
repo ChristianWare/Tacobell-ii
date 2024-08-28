@@ -14,7 +14,7 @@
 
 .categoryName,
 .activeCategory {
-  color: var(--black);
+  color: var(--olive);
   background-color: var(--white);
   font-size: 3rem;
   font-family: var(--staatliches);
@@ -27,12 +27,12 @@
 }
 
 .categoryName:hover {
-  background-color: var(--purple);
+  background-color: var(--olive);
   color: var(--white);
 }
 
 .activeCategory {
-  background-color: var(--purple);
+  background-color: var(--olive);
   color: var(--tan);
 }
 

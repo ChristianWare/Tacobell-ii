@@ -14,7 +14,7 @@ interface Props {
 const MenuSection = ({ data, categoryData }: Props) => {
   const [selectedCategory, setSelectedCategory] = useState<string>("");
   const [currentPage, setCurrentPage] = useState<number>(1);
-  const itemsPerPage = 4;
+  const itemsPerPage = 10;
 
   const filteredData = selectedCategory
     ? data.filter((product) => product.categoryName === selectedCategory)
