@@ -31,7 +31,7 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 2rem;
-  margin-bottom: 10rem;
+  margin-bottom: 5rem;
 }
 
 .box {
@@ -65,6 +65,12 @@
   text-align: center;
 }
 
+.btnContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 @media screen and (max-width: 1068px) {
   .contentBottom {
     grid-template-columns: repeat(2, 1fr);
@@ -96,6 +102,7 @@
 
   .contentBottom {
     grid-template-columns: repeat(1, 1fr);
+    margin-bottom: 2rem;
   }
 
   .box {
@@ -103,5 +110,11 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+  }
+
+  .btnContainer {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(1, 1fr);
   }
 }

@@ -8,8 +8,8 @@ import Label from "../Label/Label";
 import Image from "next/image";
 import Img from "../../public/images/tacolove5.jpg";
 import Nav from "../Nav/Nav";
-// import { motion } from "framer-motion";
-// import { fadeIn } from "../../animation/variants";
+import { motion } from "framer-motion";
+import { fadeIn } from "../../animation/variants";
 import RotatingText from "../RotatingText/RotatingText";
 
 const Hero = () => {
@@ -28,11 +28,11 @@ const Hero = () => {
       <LayoutWrapper>
         <ContentPadding>
           <div className={styles.content}>
-            <div
-              // variants={fadeIn("up", 0.3)}
-              // initial='hidden'
-              // whileInView={"show"}
-              // viewport={{ once: false, amount: 0.3 }}
+            <motion.div
+              variants={fadeIn("up", 0.3)}
+              initial='hidden'
+              whileInView={"show"}
+              viewport={{ once: false, amount: 0.3 }}
               className={styles.left}
             >
               <Label text='Yo Quiero Taco Bell' color='white' />
@@ -48,7 +48,7 @@ const Hero = () => {
                 <Button text='View Menu' href='/menu' btnType='primary' />
                 <Button text='Contact us' href='/contact' btnType='primaryii' />
               </div>
-            </div>
+            </motion.div>
             <div className={styles.right}>
               <RotatingText text='Live mas • Live mas • Live mas • Live mas • Live mas • Live mas •' />
             </div>

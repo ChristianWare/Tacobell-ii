@@ -4,6 +4,7 @@ import Breakfast from "../../public/icons/breakfast.svg";
 import Fries from "../../public/icons/fries.svg";
 import Drinks from "../../public/icons/drinks.svg";
 import Dessert from "../../public/icons/dessert.svg";
+import Button from "../Button/Button";
 
 const preHero = [
   {
@@ -48,6 +49,9 @@ const PostHero = () => {
               <p className={styles.description}>{x.desc}</p>
             </div>
           ))}
+        </div>
+        <div className={styles.btnContainer}>
+          <Button text='View Menu' href='/menu' btnType='primaryiii' />
         </div>
       </LayoutWrapper>
     </div>
