@@ -14,7 +14,6 @@ interface Props {
 }
 
 const Nav: FC<Props> = ({ color = "", barColor = "" }) => {
-
   const [isOpen, setIsOpen] = useState(false);
   const [isOverlayVisible, setIsOverlayVisible] = useState(false);
 
@@ -64,10 +63,6 @@ const Nav: FC<Props> = ({ color = "", barColor = "" }) => {
     {
       text: "Contact",
       href: "/contact",
-    },
-    {
-      text: "Blog",
-      href: "/blog",
     },
   ];
 

@@ -1,0 +1,168 @@
+.container {
+  position: relative;
+  height: 100%;
+}
+
+.imgOverlay {
+  z-index: 2;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(rgba(10, 7, 27, 0.7), rgba(10, 7, 27, 0.7));
+}
+
+.img {
+  object-fit: cover;
+}
+
+.content {
+  display: flex;
+  position: relative;
+}
+
+.video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+}
+
+.steak,
+.meat,
+.donut,
+.icecream {
+  width: 7rem;
+  height: 7rem;
+  color: var(--green);
+  z-index: 3;
+}
+
+.left {
+  flex: 2;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.heading {
+  z-index: 3;
+  color: var(--tan);
+  /* text-align: right; */
+}
+
+.copy {
+  z-index: 3;
+  font-size: 2rem;
+  font-weight: 500;
+  color: var(--tan);
+  width: 50%;
+  margin-right: auto;
+  /* text-align: right; */
+}
+
+.iconBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.btnContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  width: 50%;
+  margin-top: 1rem;
+}
+
+.leftBottom {
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  width: fit-content;
+}
+
+.lb1 {
+  padding: 2rem;
+  padding-left: 0rem;
+  border-right: 2px solid var(--border2);
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.lb2 {
+  padding: 2rem;
+  font-size: 0;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.icon {
+  color: var(--white);
+}
+
+.b2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+@media screen and (max-width: 1200px) {
+  .container {
+    height: 100%;
+  }
+}
+
+@media screen and (max-width: 1068px) {
+  .content {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+  }
+
+  .left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .heading {
+    text-align: center;
+  }
+
+  .copy {
+    text-align: center;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .btnContainer {
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .heading,
+  .copy {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .heading {
+    font-size: 8rem;
+  }
+}

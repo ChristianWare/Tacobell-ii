@@ -1,7 +1,7 @@
 .container {
   background-color: var(--olive);
   padding-top: 9rem;
-  margin-bottom: 9rem;
+  /* margin-bottom: 9rem; */
 }
 
 .top,

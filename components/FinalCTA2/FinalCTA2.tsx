@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import ContentPadding from "../ContentPadding/ContentPadding";
 import LayoutWrapper from "../LayoutWrapper";
 import Img from "../../public/images/tacolove2.jpg";
 import styles from "./FinalCTA2.module.css";

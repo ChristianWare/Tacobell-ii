@@ -1,0 +1,200 @@
+.container {
+  background-color: var(--olive);
+  height: 100%;
+  overflow: hidden;
+  padding-bottom: 15rem;
+}
+
+.top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 3rem;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.pasta,
+.hamburger {
+  position: absolute;
+  width: 15rem;
+  height: 15rem;
+  color: var(--green);
+  opacity: 0.5;
+}
+
+.pasta {
+  top: 0;
+  left: 0;
+  transform: rotate(45deg);
+}
+
+.hamburger {
+  top: 0;
+  right: 0;
+  transform: rotate(-45deg);
+}
+
+.heading,
+.copy {
+  margin-bottom: 1rem;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+  color: var(--bgColor);
+}
+
+.bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  overflow: hidden;
+  margin-top: 8rem;
+  /* border: 1px solid var(--tan); */
+  padding: 5rem;
+}
+
+.cardContainer1 {
+  display: grid;
+  grid-auto-flow: column;
+  animation: moveReverse 60s linear infinite;
+  width: 100%;
+  grid-gap: 1rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+.cardContainer1:hover {
+  animation-play-state: paused;
+}
+
+.card {
+  padding: 2rem;
+  border-radius: 20px;
+  border: 1px solid var(--bgColor);
+  width: 465px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.review {
+  font-weight: 600;
+  color: var(--tan);
+}
+
+.personBox {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.personImage {
+  border: 1px solid var(--green);
+  border-radius: 50%;
+  padding: 0.3rem;
+  color: var(--green);
+}
+
+.reviewer {
+  color: var(--green);
+  font-weight: 700;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.company {
+  color: var(--green);
+  display: block;
+  font-weight: 400;
+  opacity: 0.7;
+}
+
+@media screen and (max-width: 968px) {
+  .copy {
+    width: 100%;
+  }
+
+  .pasta {
+    top: -40px;
+    left: 0;
+    width: 10rem;
+    height: 10rem;
+  }
+
+  .hamburger {
+    top: 20px;
+    right: 0;
+    width: 10rem;
+    height: 10rem;
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .content {
+    padding-bottom: 5rem;
+  }
+
+  .cardContainer1,
+  .cardContainer2 {
+    grid-gap: 2rem;
+  }
+
+  .cardContainer1 {
+    margin-bottom: 2rem;
+  }
+
+  .bottom {
+    padding: 3rem;
+    padding-bottom: 5rem;
+  }
+
+  .top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .heading,
+  .copy {
+    text-align: center;
+  }
+
+  .pasta {
+    top: 0px;
+    width: 8rem;
+    height: 8rem;
+  }
+
+  .hamburger {
+    top: 200px;
+    width: 8rem;
+    height: 8rem;
+  }
+}
+
+@keyframes move {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes moveReverse {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
