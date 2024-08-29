@@ -40,8 +40,9 @@ const ServicesHero = () => {
           >
             <h1 className={styles.heading}>Our Services</h1>
             <p className={styles.copy}>
-              We empower property owners to take control of their bookings with
-              a custom website to showcase thier unique offerings.
+              At Taco Bell, we empower fans to take control of their cravings by
+              offering a customizable menu that lets them showcase their unique
+              taste.
             </p>
           </motion.div>
         </div>
