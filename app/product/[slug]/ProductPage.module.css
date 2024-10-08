@@ -51,7 +51,6 @@
   color: var(--olive);
 }
 
-
 .specsHeading {
   text-decoration: underline;
 }
@@ -67,6 +66,16 @@
   align-items: center;
   justify-content: center;
   gap: 1rem;
+}
+
+.icon {
+  color: var(--olive);
+  width: 4rem;
+  height: 4rem;
+  border: 1px solid var(--olive);
+  border-radius: 50%;
+  padding: 1rem;
+  opacity: 0.7;
 }
 
 .btnContainer {

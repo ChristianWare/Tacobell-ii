@@ -11,7 +11,11 @@ import Popular from "@/components/Popular/Popular";
 import { PortableText } from "@portabletext/react";
 import Faq from "@/components/Faq/Faq";
 import PostHero from "@/components/PostHero/PostHero";
-import Taco from "../../../public/icons/taco.svg";
+import RollingPin from "../../../public/icons/rollingpin.svg";
+import Pestle from "../../../public/icons/pestle.svg";
+import PerfectlySpiced from "../../../public/icons/perfectlyspiced.svg";
+import Fresh from "../../../public/icons/fresh.svg";
+import Farm from "../../../public/icons/farm.svg";
 import Button from "@/components/Button/Button";
 
 async function getData(slug: string) {
@@ -65,24 +69,24 @@ export default async function ProductPage({
 
   const specs = [
     {
-      icon: <Taco width={25} height={25} className={styles.icon} />,
-      value: "Gluten free",
+      icon: <RollingPin className={styles.icon} />,
+      value: "Freshly Made ",
     },
     {
-      icon: <Taco width={25} height={25} className={styles.icon} />,
-      value: "Gluten free",
+      icon: <Pestle className={styles.icon} />,
+      value: "Authentic Flavors",
     },
     {
-      icon: <Taco width={25} height={25} className={styles.icon} />,
-      value: "Gluten free",
+      icon: <Farm className={styles.icon} />,
+      value: "Farm Fresh",
     },
     {
-      icon: <Taco width={25} height={25} className={styles.icon} />,
-      value: "Gluten free",
+      icon: <Fresh className={styles.icon} />,
+      value: "No Additives",
     },
     {
-      icon: <Taco width={25} height={25} className={styles.icon} />,
-      value: "Gluten free",
+      icon: <PerfectlySpiced className={styles.icon} />,
+      value: "Perfectly Spiced",
     },
   ];
 
@@ -99,7 +103,7 @@ export default async function ProductPage({
           </div>
           <div className={styles.topRight}>
             <h1 className={styles.heading}>{data.name}</h1>
-              <div className={styles.price}>$ {data.price}</div>
+            <div className={styles.price}>$ {data.price}</div>
             <div className={styles.nutritionBox}>
               {nutrition.map((x) => (
                 <div key={x.id} className={styles.nutrition}>
@@ -122,8 +126,8 @@ export default async function ProductPage({
               ))}
             </div>
             <div className={styles.btnContainer}>
-              <Button text='View Menu' href='/menu' btnType='primaryiii' />
-              <Button text='Contact us' href='/contact' btnType='primaryiv' />
+              <Button text='View Gallery' href='/menu' btnType='primaryiii' />
+              <Button text='Place Order' href='/contact' btnType='primaryiv' />
             </div>
           </div>
         </div>
