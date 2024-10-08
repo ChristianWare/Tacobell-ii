@@ -37,9 +37,9 @@ const Footer = () => {
     <div className={styles.parent}>
       <LayoutWrapper>
         <footer className={styles.container}>
-          <div className={styles.topTop}>
+          {/* <div className={styles.topTop}>
             <ContactSection />
-          </div>
+          </div> */}
           <div className={styles.brandInfoMobile}>
             <div className={styles.logoBox}>
               <h6 className={styles.logo}>Taco Bell</h6>
