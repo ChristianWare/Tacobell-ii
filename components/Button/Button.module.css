@@ -26,7 +26,7 @@
 .primary {
   color: var(--black);
   background-color: var(--green);
-  border: 2px solid var(--green);
+  border: 1px solid var(--green);
 }
 
 .primary:hover {
@@ -37,7 +37,7 @@
 .primaryii {
   color: var(--green);
   background-color: transparent;
-  border: 2px solid var(--green);
+  border: 1px solid var(--green);
 }
 
 .primaryii:hover {
@@ -48,7 +48,7 @@
 .primaryiii {
   color: var(--olive);
   background-color: var(--green);
-  border: 2px solid var(--olive);
+  border: 1px solid var(--olive);
 }
 
 .primaryiii:hover {
@@ -59,7 +59,7 @@
 .primaryiv {
   color: var(--olive);
   background-color: transparent;
-  border: 2px solid var(--olive);
+  border: 1px solid var(--olive);
 }
 
 .primaryiv:hover {

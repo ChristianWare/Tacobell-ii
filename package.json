@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@portabletext/react": "^3.1.0",
     "@radix-ui/react-dialog": "^1.0.5",
     "@sanity/image-url": "^1.0.2",
     "@stripe/stripe-js": "^2.4.0",

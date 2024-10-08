@@ -40,7 +40,7 @@ const GalleryGrid = ({ images }: iAppProps) => {
 
   return (
     <div className={styles.container}>
-      <h2 className={styles.heading2}>Featured gallery</h2>
+      <h2 className={styles.heading2}>gallery</h2>
       <div className={styles.gallery}>
         {images.map((slide: any, index: any) => (
           <div key={index} className={styles.imgContainer4}>

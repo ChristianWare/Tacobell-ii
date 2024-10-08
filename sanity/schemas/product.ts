@@ -1,3 +1,5 @@
+import {Rule} from 'sanity'
+
 export default {
   name: 'product',
   type: 'document',
@@ -39,6 +41,21 @@ export default {
       to: [
         {
           type: 'category',
+        },
+      ],
+    },
+    {
+      name: 'content',
+      type: 'array',
+      title: 'Content',
+      validation: (Rule: Rule) => Rule.required().error('Required'),
+      of: [
+        {
+          type: 'block',
+        },
+        {
+          type: 'image',
+          fields: [{type: 'text', name: 'alt', title: 'Alt'}],
         },
       ],
     },

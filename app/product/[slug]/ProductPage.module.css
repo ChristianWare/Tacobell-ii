@@ -4,9 +4,20 @@
 
 .top {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 7rem;
-  margin-top: 5rem;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 5rem;
+}
+
+.topLeft {
+  height: 100%;
+}
+
+.topRight {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  grid-gap: 2rem;
 }
 
 .heading {
@@ -15,49 +26,54 @@
 }
 
 .price {
-  font-weight: 600;
-  white-space: nowrap;
-}
-
-.rotatingTextBox {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 3rem;
-}
-
-.top {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.price {
-  background-color: var(--green);
-  width: fit-content;
-  padding: 2rem;
+  padding: 1rem;
   color: var(--olive);
   border: 1px solid var(--olive);
-  border-radius: 15px;
+  border-radius: 10px;
   font-size: 2rem;
+}
+
+.nutritionBox {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.portableTextContent h6 {
+  margin-top: 2rem;
+  display: block;
+}
+
+.portableTextContent li {
+  margin-left: 3rem;
+  color: var(--olive);
+}
+
+
+.specsHeading {
+  text-decoration: underline;
+}
+
+.specs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem;
+}
+
+.specsItem {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 1rem;
 }
 
-.perNight {
-  color: var(--bgColor);
-  letter-spacing: 1px;
-}
-
-.nutritionBox {
-  margin-top: 2rem;
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  gap: 3rem;
-  flex-wrap: wrap;
+.btnContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 100%;
+  grid-gap: 2rem;
 }
 
 .imgGrid {

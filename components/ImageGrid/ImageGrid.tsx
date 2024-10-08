@@ -11,26 +11,25 @@ interface Props {
 const ImageGrid = ({ images, text }: Props) => {
   return (
     <div className={styles.imgGrid}>
-      <div className={styles.gridLeft}>
-        {images[0] && (
-          <div className={styles.imgContainer}>
-            <Image
-              src={urlFor(images[0]).url()} // Use urlFor to generate the image URL
-              alt={images[0]?.alt || "Image 1"}
-              fill
-              className={styles.img}
-            />
-            <div className={styles.labelContainer}>
+      {images[0] && (
+        <div className={styles.imgContainer}>
+          <Image
+            src={urlFor(images[0]).url()}
+            alt={images[0]?.alt || "Image 1"}
+            fill
+            className={styles.img}
+          />
+          {/* <div className={styles.labelContainer}>
               <Label text={text} color='category' />
-            </div>
-          </div>
-        )}
-      </div>
-      <div className={styles.gridRight}>
+            </div> */}
+        </div>
+      )}
+      
+      {/* <div className={styles.gridRight}>
         {images[1] && (
           <div className={styles.imgContainer2}>
             <Image
-              src={urlFor(images[1]).url()} // Use urlFor to generate the image URL
+              src={urlFor(images[1]).url()} 
               alt={images[1]?.alt || "Image 2"}
               fill
               className={styles.img}
@@ -40,7 +39,7 @@ const ImageGrid = ({ images, text }: Props) => {
         {images[2] && (
           <div className={styles.imgContainer3}>
             <Image
-              src={urlFor(images[2]).url()} // Use urlFor to generate the image URL
+              src={urlFor(images[2]).url()} 
               alt={images[2]?.alt || "Image 3"}
               fill
               className={styles.img}
@@ -57,7 +56,7 @@ const ImageGrid = ({ images, text }: Props) => {
             />
           </div>
         )}
-      </div>
+      </div> */}
     </div>
   );
 };
