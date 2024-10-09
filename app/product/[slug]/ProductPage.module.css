@@ -47,6 +47,10 @@
   display: block;
 }
 
+.portableTextContent p {
+  margin-bottom: 1.5rem;
+}
+
 .portableTextContent li {
   margin-left: 3rem;
   color: var(--olive);

@@ -137,6 +137,9 @@ export default async function ProductPage({
           </div>
         </div>
         <br />
+        <br />
+        <br />
+        <br />
         <GalleryGrid images={data.images} />
       </LayoutWrapper>
       <PostHero />

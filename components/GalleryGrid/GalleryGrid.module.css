@@ -1,6 +1,8 @@
 .heading2 {
-  /* margin-bottom: 5rem; */
   text-align: right;
+  width: 100%;
+  border-bottom: 1px solid var(--olive);
+  padding-bottom: 1rem;
 }
 
 .gallery {
@@ -88,6 +90,10 @@
 @media screen and (max-width: 968px) {
   .gallery {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .heading2 {
+    text-align: center;
   }
 }
 
