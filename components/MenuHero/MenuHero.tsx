@@ -40,8 +40,9 @@ const MenuHero = () => {
               Our <br /> tasty menu
             </h1>
             <p className={styles.copy}>
-              We empower property owners to take control of their bookings with
-              a custom website to showcase thier unique offerings.
+              The Taco Bell menu has all of your favorite Mexican inspired menu
+              items. From classic tacos and burritos to our epic specialties and
+              combos, there’s something for everyone. Find something new today!
             </p>
             <div className={styles.iconBox}>
               <Steak className={styles.steak} />
