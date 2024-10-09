@@ -118,6 +118,10 @@
     grid-template-columns: repeat(1, 1fr);
   }
 
+  .heading {
+    width: 100%;
+  }
+
   .specs {
     grid-template-columns: repeat(3, 1fr);
   }
