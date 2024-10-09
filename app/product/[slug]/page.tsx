@@ -4,10 +4,8 @@ import styles from "./ProductPage.module.css";
 import LayoutWrapper from "@/components/LayoutWrapper";
 import Nav from "@/components/Nav/Nav";
 import Delivery from "@/components/Delivery/Delivery";
-import HowItWorks from "@/components/HowItWorks/HowItWorks";
 import GalleryGrid from "@/components/GalleryGrid/GalleryGrid";
 import ImageGrid from "@/components/ImageGrid/ImageGrid";
-import Popular from "@/components/Popular/Popular";
 import { PortableText } from "@portabletext/react";
 import Faq from "@/components/Faq/Faq";
 import PostHero from "@/components/PostHero/PostHero";
@@ -17,6 +15,9 @@ import PerfectlySpiced from "../../../public/icons/perfectlyspiced.svg";
 import Fresh from "../../../public/icons/fresh.svg";
 import Farm from "../../../public/icons/farm.svg";
 import Button from "@/components/Button/Button";
+import Image from "next/image";
+import { urlFor } from "@/app/lib/sanity"; // Import urlFor function
+import Popular from "@/components/Popular/Popular";
 
 async function getData(slug: string) {
   const query = `*[_type == "product" && slug.current == "${slug}"][0] {
@@ -96,10 +97,14 @@ export default async function ProductPage({
       <LayoutWrapper>
         <div className={styles.top}>
           <div className={styles.topLeft}>
-            <ImageGrid
-              images={data.images.slice(0, 4)}
-              text={data.categoryName}
-            />
+            <div className={styles.imgContainer}>
+              <Image
+                src={urlFor(data.images[0]).url()}
+                alt='image'
+                fill
+                className={styles.img}
+              />
+            </div>
           </div>
           <div className={styles.topRight}>
             <h1 className={styles.heading}>{data.name}</h1>
@@ -131,17 +136,11 @@ export default async function ProductPage({
             </div>
           </div>
         </div>
-
-        <div className={styles.propDetails}>
-          <div className={styles.left}></div>
-        </div>
-        <br />
-        <br />
-        <br />
         <br />
         <GalleryGrid images={data.images} />
       </LayoutWrapper>
       <PostHero />
+      <Popular />
       <Faq />
       <Delivery />
     </div>

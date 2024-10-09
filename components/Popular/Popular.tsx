@@ -30,7 +30,7 @@ export default async function Popular() {
       <LayoutWrapper>
         <div className={styles.content}>
           <div className={styles.top}>
-            <h2 className={styles.heading}>What&apos;s Trending</h2>
+            <h2 className={styles.heading}>What&apos;s Trending...</h2>
           </div>
           <div className={styles.bottom}>
             {data.map((product) => (

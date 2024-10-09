@@ -1,5 +1,6 @@
 .parent {
   background-color: var(--bgColor);
+  padding-top: 10rem;
 }
 
 .top {
@@ -7,7 +8,7 @@
 }
 
 .heading {
-  text-align: center;
+  /* text-align: right; */
   width: 100%;
   margin-bottom: 5rem;
 }
@@ -26,15 +27,13 @@
   justify-content: center;
 }
 
-@media screen and (max-width: 1168px) {
-  .bottom {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
 @media screen and (max-width: 968px) {
   .bottom {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .heading {
+    text-align: center;
   }
 }
 

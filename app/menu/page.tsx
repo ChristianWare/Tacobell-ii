@@ -1,9 +1,5 @@
-import PageIntro from "@/components/PageIntro/PageIntro";
-import Img from "../../public/images/img5.jpg";
 import MenuSection from "@/components/MenuSection/MenuSection";
 import Delivery from "@/components/Delivery/Delivery";
-import FinalCTA2 from "@/components/FinalCTA2/FinalCTA2";
-import FinalCta from "@/components/FinalCta/FinalCta";
 import { client } from "../lib/sanity";
 import { categoryData, simplifiedProduct } from "../interface";
 import MenuHero from "@/components/MenuHero/MenuHero";
