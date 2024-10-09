@@ -1,6 +1,6 @@
 .card {
-  border-bottom-right-radius: 30px;
-  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
   border: 1px solid var(--olive);
   display: flex;
   flex-direction: column;
@@ -38,7 +38,7 @@
 
 .title {
   font-family: var(--staatliches);
-  font-size: 3.6rem;
+  font-size: 2.7rem;
   font-style: normal;
   line-height: 1em;
   text-align: center;
@@ -58,7 +58,6 @@
 }
 
 .price {
-  /* text-align: center; */
   width: 100%;
   color: var(--olive);
   overflow: hidden;
