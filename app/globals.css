@@ -77,9 +77,8 @@ h2 {
 h3 {
   font-size: 5.5rem;
   line-height: 1em;
-  font-family: var(--fraunces);
-  font-style: italic;
-  font-weight: 600;
+  /* font-family: var(--fraunces); */
+  /* font-weight: 600; */
 }
 
 h4 {
