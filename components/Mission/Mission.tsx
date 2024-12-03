@@ -9,21 +9,22 @@ import { fadeIn } from "../../animation/variants";
 const mission = [
   {
     feature: "Trust & Transparency",
-    desc: "We prioritize trust and transparency, building a reliable and secure environment for vacation rental owners.",
+    desc: "We prioritize trust and transparency, creating a reliable and secure online experience for Taco Bell fans.",
   },
   {
-    feature: "User-Friendly",
-    desc: "We strive to offer a personalized and user-friendly experience, tailoring our services to meet the unique needs of each host.",
+    feature: "User-Friendly Design",
+    desc: "We focus on delivering an intuitive and user-friendly website, making it easier than ever for customers to explore our menu and place orders.",
   },
   {
-    feature: "Growth",
-    desc: "Our mission is to contribute to the growth of vacation rental businesses, enabling hosts to thrive in a competitive marketplace",
+    feature: "Growth & Connection",
+    desc: "Our mission is to foster growth and deepen the connection between Taco Bell and its customers, providing a digital platform that enhances brand loyalty.",
   },
   {
     feature: "Personalization",
-    desc: "Continuously enhance user experience by offering personalized solutions that cater to the specific requirements of each vacation rental owner.",
+    desc: "We continuously enhance the online experience by offering personalized features that cater to the unique preferences of every Taco Bell fan.",
   },
 ];
+
 
 const Mission = () => {
   return (
@@ -41,12 +42,12 @@ const Mission = () => {
           >
             <div className={styles.topLeft}>
               <h3 className={styles.heading}>
-                Empowering vacation rental owners with personalized and
-                user-friendly direct booking websites, our mission is to
-                liberate hosts from intermediary platforms, fostering
-                independence, trust, and growth in their businesses, as we
-                redefine the vacation rental experience away from Airbnb. Here
-                are the four ways we plan on accomplishing that goal:
+                Transforming the Taco Bell online experience with a fresh,
+                user-friendly, and innovative design, our mission is to deliver
+                a seamless and personalized digital journey for customers.
+                We&apos;re redefining how fans interact with Taco Bell,
+                fostering convenience, trust, and brand connection. Here are the
+                four key ways we aim to achieve this vision:
               </h3>
             </div>
             <div className={styles.topRight}></div>
