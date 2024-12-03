@@ -22,14 +22,15 @@
 }
 
 .heading {
-  font-size: 8rem;
-  width: 70%;
+  font-size: 4rem;
+  width: 50%;
+  line-height: 110%;
 }
 
 .price {
-  padding: 1rem;
+  /* padding: 1rem; */
   color: var(--olive);
-  border: 1px solid var(--olive);
+  /* border: 1px solid var(--olive); */
   border-radius: 10px;
   font-size: 2rem;
 }
@@ -42,7 +43,8 @@
   flex-wrap: wrap;
 }
 
-.portableTextContent h6, .portableTextContent strong {
+.portableTextContent h6,
+.portableTextContent strong {
   margin-top: 2rem;
   margin-bottom: 1rem;
   display: block;
@@ -98,7 +100,7 @@
 .imgContainer {
   position: relative;
   width: 100%;
-  height: 100%;
+  height: 500px;
 }
 
 .img {

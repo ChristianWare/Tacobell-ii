@@ -11,6 +11,7 @@ import { client } from "./lib/sanity";
 import MenuSection from "@/components/MenuSection/MenuSection";
 import { simplifiedProduct } from "./interface";
 import FeaturedDrink from "@/components/FeaturedDrink/FeaturedDrink";
+import Mission from "@/components/Mission/Mission";
 
 async function getProductData() {
   const query = `*[_type == "product"]  {
@@ -52,6 +53,7 @@ export default async function Home() {
       <Hero />
       <MenuSection data={productData} />
       <AboutUsSection />
+      <Mission />
       <FeaturedDrink drinks={featuredDrink} />{" "}
       {/* Pass the first drink as a prop */}
       <Usp />

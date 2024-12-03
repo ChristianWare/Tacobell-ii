@@ -1,5 +1,6 @@
 .container {
   background-color: var(--bgColor);
+  padding-top: 10rem;
 }
 
 .headingMain {
